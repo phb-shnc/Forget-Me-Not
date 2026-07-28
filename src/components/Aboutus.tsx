@@ -3,7 +3,7 @@ function Aboutus(){
 
 <section className="relative min-h-screen overflow-hidden">
 
-    
+    w
         
 </section>
     );

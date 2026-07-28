@@ -19,15 +19,15 @@ function Navbar() {
                 md:px-10
                 lg:px-14
 
-                py-4
+                py-3
 
-                bg-white/20
-                backdrop-blur-3xl
+                bg-white/10
+                backdrop-blur-2xl
 
                 border
                 border-amber-50/50
 
-                rounded-4xl
+                rounded-3xl
                 shadow-lg
 
                 z-50
@@ -35,11 +35,11 @@ function Navbar() {
         >
             {/* Logo */}
             <div>
-                <h1
+                <a href="#"
                     className="
                         text-xl
-                        sm:text-2xl
-                        md:text-3xl
+                        sm:text-xl
+                        md:text-2xl
 
                         font-serif
                         font-bold
@@ -48,7 +48,7 @@ function Navbar() {
                     "
                 >
                     ForgetMeNot
-                </h1>
+                </a>
             </div>
 
             {/* Right Side */}
@@ -63,17 +63,17 @@ function Navbar() {
                 "
             >
                 {/* Navigation */}
-                <div
-                    className="
+                <div 
+                    className=" 
                         flex
 
                         gap-4
                         md:gap-6
-                        lg:gap-10
+                        lg:gap-8
 
-                        text-sm
+                        text-xl
                         md:text-base
-                        lg:text-lg
+                        lg:text-l
 
                         text-white
                         font-serif
@@ -102,16 +102,17 @@ function Navbar() {
                         md:gap-5
                     "
                 >
-                    <button
+                    <a href="#"
+                    
                         className="
                             relative
 
-                            px-5
+                            px-4
                             md:px-8
-                            lg:px-10
+                            lg:px-8
 
                             py-2
-                            md:py-3
+                            md:py-2
 
                             rounded-xl
 
@@ -143,18 +144,18 @@ function Navbar() {
                         "
                     >
                         Login
-                    </button>
+                    </a>
 
-                    <button
+                    <a href="#"
                         className="
                             relative
 
                             px-5
-                            md:px-8
-                            lg:px-10
+                            md:px-6
+                            lg:px-8
 
                             py-2
-                            md:py-3
+                            md:py-2
 
                             rounded-xl
 
@@ -187,7 +188,7 @@ function Navbar() {
                         "
                     >
                         Sign up
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>
