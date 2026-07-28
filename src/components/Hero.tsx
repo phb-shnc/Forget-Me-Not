@@ -43,8 +43,8 @@ function Hero(){
                     to-blue-900
                     border
                     border-amber-50/40 
-                    rounded-xl h
-                    over:scale-105 
+                    rounded-xl 
+                    hover:scale-105 
                     transition-all 
                     duration-500 
                     font-serif">

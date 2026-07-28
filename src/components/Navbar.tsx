@@ -55,7 +55,9 @@ function Navbar() {
             <div
                 className="
                     flex
+                    flex-wrap
                     items-center
+                
 
                     gap-4
                     md:gap-8
