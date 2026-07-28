@@ -4,7 +4,7 @@ function Algorithm(){
 <section className="relative min-h-screen overflow-hidden">
 
     
-        
+        algo
 </section>
     );
 }
