@@ -1,5 +1,7 @@
-Forget-Me-Not
+# Forget-Me-Not
 A student-focused web application that uses active recall and adaptive spaced repetition to help students transform short-term learning into long-term memory.
+
+--------------------------------------------------
 
 STATUS
 
