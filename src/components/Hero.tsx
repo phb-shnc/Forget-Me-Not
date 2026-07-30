@@ -1,16 +1,23 @@
 function Hero(){
     return (
-<section className="text-center space-y-2 max-w-7xl mx-auto py-40 text-white">
+<section className="
+            text-center 
+            space-y-2 
+            max-w-7xl 
+            mx-auto 
+            py-40 
+            text-white">
 
     <div>
         <div className=" py-6">
 
        <h1 className=" 
-                    sm:text-6xl 
+                    lg:text-6xl 
+                    text-3xl
                     text-balance 
                     font-bold 
                     font-serif">
-                        
+                   
                         Defeat The Forgetting Curve
                         With Relentless Recall 
                         
@@ -21,6 +28,7 @@ function Hero(){
                     text-center 
                     text-balance 
                     max-w-[890px] 
+                    p-3
                     mx-auto
                     font-serif">
 
@@ -38,7 +46,8 @@ function Hero(){
                     py-2 
                     px-9 
                     
-                    mt-15 bg-gradient-to-br 
+                    mt-12
+                    lg:mt-15 bg-gradient-to-br 
                     from-indigo-950 
                     to-blue-900
                     border

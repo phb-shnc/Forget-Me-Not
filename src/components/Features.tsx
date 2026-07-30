@@ -67,9 +67,9 @@ function Features() {
 
                 <div
                     className="
-                        flex
+                        md:flex
                         gap-1
-                        h-[350px]
+                        h-[450px]
                         mx-8
                     "
                 >
@@ -91,6 +91,7 @@ function Features() {
                                 rounded-3xl
                                 cursor-pointer
                                 flex
+                                md:flex-col
                                 border
                                 border-white/10
                                 shadow-2xl
@@ -122,7 +123,7 @@ function Features() {
                                     -bottom-20
                                     w-80
                                     h-80
-                                    rounded-full
+                                    rounded    -full
                                     bg-cyan-300/20
                                     blur-3xl
                                 "
@@ -164,7 +165,8 @@ function Features() {
                                         className="
                                             mt-6
                                             text-white
-                                            text-3xl
+                                            text-xl
+                                            lg:text-3xl
                                             font-bold
                                             font-medium
                                             leading-tight
@@ -183,8 +185,11 @@ function Features() {
                                         }}
                                         className="
                                             mt-6
+                                            text-[70%]
+                                            md:text-lg
                                             text-white/80
-                                            leading-7
+
+                                            md:leading-7
                                             max-w-xs
                                             font-serif
                                         "
