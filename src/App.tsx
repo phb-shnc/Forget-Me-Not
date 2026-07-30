@@ -97,7 +97,7 @@ function App() {
     w-[clamp(250px,30vw,500px)]
     h-[clamp(450px,35vw,650px)]
     rounded-full
-    bg-blue-700/25
+    bg-blue-700
     blur-[220px]
   "
 />
@@ -111,7 +111,7 @@ function App() {
     w-[clamp(300px,35vw,600px)]
     h-[clamp(300px,35vw,600px)]
     rounded-full
-    bg-orange-300/35
+    bg-orange-300
     blur-[260px]
   "
 />
@@ -124,7 +124,7 @@ function App() {
     w-[clamp(250px,30vw,500px)]
     h-[clamp(450px,40vw,700px)]
     rounded-full
-    bg-green-300/30
+    bg-green-300
     blur-[280px]
   "
 />
@@ -137,11 +137,11 @@ function App() {
     w-[clamp(300px,35vw,600px)]
     h-[clamp(400px,35vw,650px)]
     rounded-full
-    bg-purple-500/40
+    bg-purple-500
     blur-[250px]
   "
-/>
 
+/>
 
 <div
   className="
@@ -152,7 +152,7 @@ function App() {
     w-[clamp(350px,40vw,700px)]
     h-[clamp(350px,40vw,700px)]
     rounded-full
-    bg-purple-500/45
+    bg-purple-500
     blur-[280px]
   "
 />
