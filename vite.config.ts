@@ -7,5 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 });
-
