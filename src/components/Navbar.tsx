@@ -27,7 +27,8 @@ function Navbar() {
                 border
                 border-amber-50/50
 
-                rounded-3xl
+                rounded-xl
+                md:rounded-3xl
                 shadow-lg
 
                 z-50
@@ -37,9 +38,10 @@ function Navbar() {
             <div>
                 <a href="#"
                     className="
-                        text-xl
+                        text-[65%]
                         sm:text-xl
                         md:text-2xl
+                        
 
                         font-serif
                         font-bold
@@ -59,7 +61,7 @@ function Navbar() {
                     items-center
                 
 
-                    gap-4
+                    gap-3
                     md:gap-8
                     lg:gap-12
                 "
@@ -69,11 +71,11 @@ function Navbar() {
                     className=" 
                         flex
 
-                        gap-4
+                        gap-2
                         md:gap-6
                         lg:gap-8
-
-                        text-xl
+                        text-[29%]
+                        md:text-xl
                         md:text-base
                         lg:text-l
 
@@ -100,7 +102,7 @@ function Navbar() {
                         flex
                         items-center
 
-                        gap-3
+                        gap-2
                         md:gap-5
                     "
                 >
@@ -109,11 +111,11 @@ function Navbar() {
                         className="
                             relative
 
-                            px-4
+                            px-3
                             md:px-8
                             lg:px-8
 
-                            py-2
+                            py-1
                             md:py-2
 
                             rounded-xl
@@ -127,7 +129,7 @@ function Navbar() {
                             text-white
                             font-serif
 
-                            text-xs
+                            text-[50%]
                             md:text-sm
 
                             tracking-[0.25em]
@@ -152,11 +154,11 @@ function Navbar() {
                         className="
                             relative
 
-                            px-5
+                            px-3
                             md:px-6
                             lg:px-8
 
-                            py-2
+                            py-1
                             md:py-2
 
                             rounded-xl
@@ -171,7 +173,7 @@ function Navbar() {
                             text-indigo-900
                             font-serif
 
-                            text-xs
+                            text-[50%]
                             md:text-sm
 
                             tracking-[0.25em]

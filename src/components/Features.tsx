@@ -35,6 +35,7 @@ function Features() {
             <div className="max-w-7xl mx-auto">
 
                 <p className="
+                mt-15
                         text-center
                         text-white
                         text-xl
@@ -45,11 +46,13 @@ function Features() {
 
                 <h2
                     className="
+                         lg:text-6xl 
+                         text-white
+                        text-2xl
+                        text-balance 
+                        font-bold 
+                        font-serif
                         text-center
-                        text-white
-                        text-5xl
-                        font-bold
-                        mb-4
                     "
                 >
                     Mastery is a Discipline
@@ -69,7 +72,7 @@ function Features() {
                     className="
                         md:flex
                         gap-1
-                        h-[450px]
+                        h-[390px]
                         mx-8
                     "
                 >
