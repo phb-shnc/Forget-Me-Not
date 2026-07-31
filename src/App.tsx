@@ -5,13 +5,11 @@ import Algorithm from "./components/Algorithm";
 import Process from "./components/Process";
 import Aboutus from "./components/Aboutus";
 
-
 function App() {
   return (
+    <div>
 
-    <div> 
-
-    <div className="
+      <div className="
     relative
     width-auto
     max-w-l
@@ -162,10 +160,10 @@ function App() {
       <Hero />
       <Features />
       <Process />
-      <Algorithm />
-      <Aboutus />
+<Algorithm />
+<Aboutus />  
 
-</div>
+    </div>
     </div>
   );
 }

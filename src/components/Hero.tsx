@@ -13,7 +13,7 @@ function Hero(){
 
        <h1 className=" 
                     lg:text-6xl 
-                    text-3xl
+                    text-2xl
                     text-balance 
                     font-bold 
                     font-serif">
@@ -30,7 +30,9 @@ function Hero(){
                     max-w-[890px] 
                     p-3
                     mx-auto
-                    font-serif">
+                    font-serif
+                    text-[87%]
+                    md:text-xl">
 
             <p>ForgetMeNot transforms what you learn into what you know. 
             It builds long-term memory</p>
