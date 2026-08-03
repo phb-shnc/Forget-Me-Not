@@ -159,7 +159,7 @@ function Algorithm() {
               px-10
               py-20
               rounded-b-2xl
-              z-50
+              z-40
             "
           >
 

@@ -64,7 +64,24 @@ function Process() {
                     A clear path from learning to lasting memory.
                 </p>
 </div>
-                <div className="mt-12 flex w-8 md:w-300 ml-7 lg:ml-20 lg:max-w h-[400px] lg:h-[500px] bg-[#010321] border border-white/20 rounded-xl overflow-hidden">
+                <div
+                    className="
+                        mt-12
+                        mx-6
+                        lg:mx-0
+                        w-auto
+                        max-w-7xl
+                        h-[350px]
+                        md:h-[450px]
+                        lg:h-[500px]
+                        flex
+                        bg-[#010321]
+                        border
+                        border-white/20
+                        rounded-2xl
+                        overflow-hidden
+                    "
+                >
 
                     {steps.map((step, index) => (
                         <motion.div
@@ -92,50 +109,64 @@ function Process() {
                             {/* Expanded Card */}
                             <AnimatePresence mode="wait">
                                 {activeCard === index && (
-                                    <motion.div
-                                        key={index}
-                                        initial={{
-                                            opacity: 0,
-                                            x: 30,
-                                        }}
-                                        animate={{
-                                            opacity: 1,
-                                            x: 0,
-                                        }}
-                                        exit={{
-                                            opacity: 0,
-                                            x: -30,
-                                        }}
-                                        transition={{
-                                            duration: 0.35,
-                                        }}
-                                        className="h-full p-10"
-                                    >
-                                        <h3 className=" text-2xl lg:text-4xl font-bold">
-                                            {step.number}
-                                        </h3>
+    <motion.div
+        key={index}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -30 }}
+        transition={{ duration: 0.35 }}
+        className="h-full p-5 md:p-8 lg:p-10"
+    >
+        <div className="flex flex-col lg:flex-row justify-between items-center h-full gap-8">
 
-                                <div className="ml-2 md:ml-5">
+            {/* Left Side */}
+            <div className="flex-1">
 
-                                        <h2 className="mt-3 lg:mt-8 text-l lg:text-4xl font-bold">
-                                            {step.title}
-                                        </h2>
+                <h3 className="text-2xl lg:text-4xl font-bold">
+                    {step.number}
+                </h3>
 
-                                        <p className="mt-2  md:mt-6 text-white/70 max-w-lg text-[55%] md:text-sm leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                </div>
-                                        <img 
-                                            src={step.image}
-                                            alt={step.title}
-                                            className="mt-2 md:mt-10 w-[360px] rounded-lg ml-5"
-                                        />
+                <div className="mt-4 lg:mt-8">
 
-                                        <div className="absolute bottom-4 left-6 md:left-10 rotate-[-90deg] origin-left  text-l lg:text-2xl font-bold text-white/90">
-                                            {step.label}
-                                        </div>
-                                    </motion.div>
-                                )}
+                    <h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                        {step.title}
+                    </h2>
+
+                    <p className="mt-4 md:mt-6 text-white/70 text-xs md:text-sm lg:text-base leading-relaxed max-w-md">
+                        {step.description}
+                    </p>
+
+                </div>
+
+            </div>
+
+            {/* Right Side */}
+            <div className="flex justify-center flex-1">
+
+                <img
+                    src={step.image}
+                    alt={step.title}
+                    className="
+                        w-full
+                        max-w-[220px]
+                        md:max-w-[320px]
+                        lg:max-w-[380px]
+                        object-contain
+                        rounded-lg
+                    "
+                />
+
+            </div>
+
+        </div>
+
+        {/* Vertical Label */}
+        <div className="absolute bottom-6 left-6 lg:left-8 rotate-[-90deg] origin-left text-lg lg:text-2xl font-bold text-white/90">
+            {step.label}
+        </div>
+
+    </motion.div>
+)}
                             </AnimatePresence>
 
                             {/* Collapsed Card */}

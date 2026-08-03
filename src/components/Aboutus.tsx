@@ -1,9 +1,357 @@
+import illustration from "../assets/images/illustration.jpg";
+import Partible from "../assets/images/Partible.jpg";
+import Lachica from "../assets/images/Lachica.jpg";
+import Poblete from "../assets/images/Poblete.jpg";
+
+
 function Aboutus(){
         return (
 
-<section className="relative min-h-screen overflow-hidden">
+<section className="relative overflow-hidden">
 
-    w
+<div>
+
+           <p className="
+                mt-15
+                        text-center
+                        text-white/80
+                        text-[13px]
+                        font-medium
+                        "
+                        
+                >About Us</p>
+
+                <h2
+                    className="
+                        lg:text-6xl 
+                        text-white/90
+                        text-2xl
+                        text-balance 
+                        font-bold 
+                        font-serif
+                        text-center
+                        mb-4"
+                > Meet the Developers
+                </h2>
+
+
+</div>
+
+
+<div className="flex justify-center mt-12 px-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        {/* Phoebe */}
+        <div className="relative bg-indigo-950 rounded-xl md:pt-15 pt-10 pb-5 px-5 w-33 md:w-45 md:h-30 h-25 text-center">
+            <img
+                src={Poblete}
+                alt="Phoebe Poblete"
+                className="
+                    absolute
+                    -top-8
+                    left-1/2
+                    -translate-x-1/2
+                    h-16
+                    w-16
+                    md:h-20
+                    md:w-20
+                    rounded-full
+                    object-cover
+                    border-4
+                    border-indigo-950
+                "
+            />
+
+            <div className="text-center">
+            <h1 className="text-amber-50 text-[10px] md:text-xs font-semibold">
+                Phoebe Poblete
+            </h1>
+
+            <p className="text-amber-50/80 text-[9px] md:text-[11px] font-normal mt-1">
+                Leader
+            </p>
+        </div>
+        </div>
+
+        {/* Mc */}
+        <div className="relative bg-indigo-950 rounded-xl md:pt-15 pt-10 pb-5 px-5 w-33 md:w-45 md:h-30 h-25 text-center">
+            <img
+                src={Lachica}
+                alt="Mc Lachica"
+                className="
+                    absolute
+                    -top-8
+                    left-1/2
+                    -translate-x-1/2
+                    h-16
+                    w-16
+                    md:h-20
+                    md:w-20
+                    rounded-full
+                    object-cover
+                    border-4
+                    border-indigo-950
+                "
+            />
+
+            <div className="text-center">
+                <h1 className="text-amber-50 text-[10px] md:text-xs font-semibold">
+                    Mc Lachica
+                </h1>
+
+                <p className="text-amber-50/80 text-[9px] md:text-[11px] font-normal mt-1">
+                    Back-end Developer
+                </p>
+            </div>
+        </div>
+
+        {/* Nicole */}
+        <div className="relative bg-indigo-950 rounded-xl md:pt-15 pt-10 pb-5 px-5 w-33 md:w-45 md:h-30 h-25 text-center">
+            <img
+                src={Partible}
+                alt="Nicole Partible"
+                className="
+                    absolute
+                    -top-8
+                    left-1/2
+                    -translate-x-1/2
+                    h-16
+                    w-16
+                    md:h-20
+                    md:w-20
+                    rounded-full
+                    object-cover
+                    border-4
+                    border-indigo-950
+                "
+            />
+
+            <div className="text-center">
+    <h1 className="text-amber-50 text-[10px] md:text-xs font-semibold">
+        Nicole Partible
+    </h1>
+
+    <p className="text-amber-50/80 text-[9px] md:text-[11px] font-normal mt-1">
+        Front-end Developer
+    </p>
+</div>
+        </div>
+</div>
+</div>
+
+
+<div className="px-6 md:px-20 lg:px-40 mt-16 md:mt-20">
+    <div
+        className="
+            bg-gradient-to-tl
+            from-cyan-200
+            via-indigo-400/50
+            to-indigo-400/0
+            rounded-2xl
+            min-h-[180px]
+            md:min-h-[260px]
+            lg:min-h-[320px]
+            flex
+            flex-col
+            justify-center
+            items-center
+            text-center
+            text-white
+            tracking-wider
+            px-6
+            md:px-12
+            lg:px-20
+        "
+    >
+        <h1
+            className="
+                text-lg
+                md:text-3xl
+                lg:text-4xl
+                font-bold
+                font-serif
+            "
+        >
+            Build your fortress of memory
+        </h1>
+
+        <h2
+            className="
+                mt-3
+                max-w-xs
+                md:max-w-2xl
+                lg:max-w-3xl
+                text-[11px]
+                md:text-base
+                lg:text-lg
+                font-light
+                leading-relaxed
+            "
+        >
+            Stop letting what you learn slip away. Sign up free and start your
+            first topic today.
+        </h2>
+
+        <a
+            href="#"
+            className="
+                mt-6
+                bg-black/70
+                hover:scale-105
+                transition
+                duration-200
+                text-white
+                rounded-xl
+                px-6
+                py-2
+                text-xs
+                md:text-sm
+            "
+        >
+            Start now!
+        </a>
+    </div>
+</div>
+
+<div
+    className="
+        grid
+        grid-cols-1
+        md:grid-cols-[45%_30%_25%]
+        gap-12
+        items-start
+        px-6
+        md:px-12
+        lg:px-24
+        mt-16
+        mb-12
+    "
+>
+    {/* Newsletter */}
+    <div className="tracking-wider">
+
+        <p className="text-amber-50 text-sm md:text-base font-semibold mb-4">
+            Join our newsletter!
+        </p>
+
+        <div className="relative w-full max-w-sm">
+
+            <input
+                type="text"
+                placeholder="Juancruz@gmail.com"
+                className="
+                    w-full
+                    bg-indigo-950
+                    text-white
+                    border
+                    border-blue-200
+                    rounded-xl
+                    py-2
+                    pl-4
+                    pr-28
+                    text-sm
+                    placeholder:text-gray-400
+                "
+            />
+
+            <button
+                className="
+                    absolute
+                    right-2
+                    top-1/2
+                    -translate-y-1/2
+                    bg-gradient-to-br
+                    from-indigo-400/50
+                    to-indigo-900
+                    border
+                    border-blue-300
+                    text-amber-50
+                    rounded-lg
+                    px-4
+                    py-1
+                    text-xs
+                    tracking-wider
+                    hover:text-amber-300
+                    transition
+                "
+            >
+                Submit
+            </button>
+
+        </div>
+
+        <p
+            className="
+                text-gray-400
+                text-[11px]
+                md:text-sm
+                leading-relaxed
+                mt-4
+                max-w-sm
+            "
+        >
+            Stay sharp. Get updates on new features and smarter study habits.
+            Answer our survey by joining our newsletter!
+        </p>
+
+    </div>
+
+    {/* Illustration */}
+    <div className="flex justify-center items-start">
+
+        <img
+            src={illustration}
+            alt="illustration"
+            className="
+                w-full
+                max-w-xs
+                md:max-w-sm
+                object-contain
+            "
+        />
+
+    </div>
+
+    {/* Resources */}
+    <div>
+
+        <h3
+            className="
+                font-bold
+                text-gray-300
+                text-sm
+                md:text-base
+                mb-4
+            "
+        >
+            Resources
+        </h3>
+
+        <div
+            className="
+                flex
+                flex-col
+                gap-3
+                text-gray-400
+                text-xs
+                md:text-sm
+                tracking-wider
+            "
+        >
+            <a href="#" className="hover:text-gray-300 transition">Blog</a>
+            <a href="#" className="hover:text-gray-300 transition">Help Center</a>
+            <a href="#" className="hover:text-gray-300 transition">Resources</a>
+            <a href="#" className="hover:text-gray-300 transition">Community</a>
+            <a href="#" className="hover:text-gray-300 transition">Contact</a>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
         
 </section>
     );
