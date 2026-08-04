@@ -43,24 +43,23 @@ function Process() {
     return (
         <section className="relative  text-white py-24 overflow-hidden">
 
-            <div className="max-w-[10000px] mx-auto px-1 lg:px-16 inline-block mt-10 overflow-hidden">
-
-<div className="ml-7">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mt-10 overflow-hidden">
+<div className="text-center lg:text-left">
                 <p className="inline-block mt-40 lg:mt-10 uppercase tracking-[3px] text-sm text-white/70">
                     Process
                 </p>
 
-                <h2 className=" lg:text-6xl 
+                <h2 className=" lg:text-5xl 
                          text-white
                         text-2xl
                         text-balance 
                         font-bold 
                         font-serif
-                        r mt-3 leading-tight mt-auto  mr-[15%] md:mr-1 ">
+                        mt-3 leading-tight mt-auto  mr-[15%] md:mr-1 ">
                     The work is simple but it is not easy
                 </h2>
 
-                <p className="text-white/70 mt-3 max-w-xl font-light">
+                <p className="text-white/70 mt-3 max-w-xl lg:text-[90%] font-light">
                     A clear path from learning to lasting memory.
                 </p>
 </div>
@@ -117,7 +116,7 @@ function Process() {
         transition={{ duration: 0.35 }}
         className="h-full p-5 md:p-8 lg:p-10"
     >
-        <div className="flex flex-col lg:flex-row justify-between items-center h-full gap-8">
+        <div className="flex flex-col lg:flex-row justify-between h-full gap-8">
 
             {/* Left Side */}
             <div className="flex-1">
