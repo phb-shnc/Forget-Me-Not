@@ -68,15 +68,16 @@ function Algorithm() {
     <section
       className="
       p-8
-     
+      max-w-6xl
+      mx-auto
       text-white
-      py-20
+      py-30
       "
     >
-        <div className="p-3 max-w-7xl mx-auto text-center tracking-wider">
-        <h2 className="leading-8">Algorithm</h2>      
-        <h1 className="leading-8 text-4xl font-bold ">The rhythm of memory</h1>
-        <p className="mt-5 lg:text-xl text-[75%]">The system schedules your fights with the forgetting curve.
+        <div className="p-3 max-w-7xl py-10 mx-auto text-center tracking-wider">
+        <h2 className="leading-15 opacity-80">Algorithm</h2>      
+        <h1 className="leading-8 lg:text-5xl text-4xl font-bold font-serif ">The rhythm of memory</h1>
+        <p className="mt-5 lg:text-[90%] font-light text-[80%]">The system schedules your fights with the forgetting curve.
         It adapts to your honesty, bringing weak memories back sooner and letting strong ones rest.</p>
         </div>
 
@@ -103,6 +104,9 @@ function Algorithm() {
                 border
                 border-[#2d2b73]
                 font-semibold
+                text-xs
+                md:text-xl
+                lg:2xl
                 tracking-wider
                 transition-all
                 duration-300
@@ -157,7 +161,9 @@ function Algorithm() {
               gap-20
               items-center
               px-10
-              py-20
+              py-5
+              md:py-5
+              lg:py-10
               rounded-b-2xl
               z-40
             "
@@ -185,7 +191,8 @@ function Algorithm() {
 
               <h2
                 className="
-                  text-5xl
+                  text-2xl
+                  md:text-5xl
                   font-bold
                   leading-tight
                   mb-8
@@ -200,7 +207,7 @@ function Algorithm() {
                   text-gray-300
                   leading-8
                   max-w-md
-                  mb-12
+                  mb-10
                 "
               >
                 {days[activeDay].description}
