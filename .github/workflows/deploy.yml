@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Cache Dependencies
+        uses: actions/cache@v4 
+
       - name: Setup Node JS
         uses: actions/setup-node@v4
         with:
