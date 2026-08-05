@@ -7,6 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: 'https://phb-shnc.github.io/Forget-Me-Not/',
   server: {
     watch: {
       usePolling: true,
