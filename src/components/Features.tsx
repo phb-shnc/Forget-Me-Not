@@ -32,13 +32,12 @@ function Features() {
 
     return (
         <section>
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto py-30">
 
                 <p className="
-                        mt-15
                         text-center
-                        text-white/80
-                        text-l
+                        text-white/70
+                        text-m
                         uppercase
                         mb-1
                         tracking-[3px]
@@ -50,6 +49,7 @@ function Features() {
                          lg:text-5xl 
                          text-white
                         text-2xl
+                        md:text-4xl 
                         text-balance 
                         font-bold 
                         font-serif
@@ -61,11 +61,12 @@ function Features() {
 
                 <p className="
                         text-center
-                        text-white
+                        text-white/70
                         text-l
-                        lg:text-[90%]
+                        lg:text-[130%]
                         mb-16
                         mt-5
+                        mx-6
                         font-light
                         
                     ">Three simple action to build a fortress of memory</p>

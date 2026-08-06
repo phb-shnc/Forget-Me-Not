@@ -1,5 +1,13 @@
+import { useState } from "react";
+import { FiAlignJustify } from "react-icons/fi";
+import { GrClose } from "react-icons/gr";
+
 function Navbar() {
+
+const [isOpen ,setopen] = useState(false);
+
     return (
+        <>
         <nav
             className="
                 fixed
@@ -19,7 +27,9 @@ function Navbar() {
                 md:px-10
                 lg:px-14
 
-                py-3
+                py-2
+
+                md:py-3
 
                 bg-white/10
                 backdrop-blur-2xl
@@ -34,11 +44,12 @@ function Navbar() {
                 z-50
             "
         >
+
             {/* Logo */}
             <div>
                 <a href="#"
                     className="
-                        text-[65%]
+                        text-[75%]
                         sm:text-xl
                         md:text-2xl
                         
@@ -47,22 +58,23 @@ function Navbar() {
                         font-bold
                         tracking-wide
                         text-amber-50
+                        flex
                     "
                 >
                     ForgetMeNot
                 </a>
             </div>
 
+
             {/* Right Side */}
             <div
                 className="
-                    flex
-                    flex-wrap
+                hidden
+                    lg:flex
                     items-center
                 
 
-                    gap-3
-                    md:gap-8
+                    gap-8
                     lg:gap-12
                 "
             >
@@ -193,10 +205,215 @@ function Navbar() {
                     >
                         Sign up
                     </a>
+                 </div>
                 </div>
-            </div>
-        </nav>
-    );
+                
+<button className="lg:hidden text-white text-3xl" 
+            onClick={() => setopen(true)}>
+                <FiAlignJustify />
+</button>
+</nav>
+
+
+
+
+
+
+
+
+
+
+{
+            isOpen && (
+                <div className="fixed
+                bg-black/20 
+                z-40
+                inset-0" onClick={() => setopen(false)}/>
+        )}
+
+         <div className={`fixed
+         lg:hidden
+        top-0
+        right-0
+        h-screen
+        w-[80%]
+        md:max-w-[250px]
+        max-w-[150px]
+
+        bg-gradient-to-tr
+        from-indigo-950
+        via-indigo-950
+        to-indigo-900/100
+
+        border
+        border-l-amber-50/20
+        
+        z-50
+
+
+        transform
+        transition-transform
+        duration-700
+        ${isOpen 
+            ? "translate-x-0"
+            : "translate-x-full"
+        }` 
+    }
+        >       
+        
+        <button className="absolute top-9 right-5 text-3xl text-white" 
+            onClick={() => setopen(false)}>
+                <GrClose size={20} /> </button>
+
+
+                <p className="mt-27
+                md:mt-30 
+                px-2 
+                md:text-[25px]
+                text-l 
+                text-white 
+                font-bold 
+                font-serif 
+                text-center
+                md:mb-10">
+                    
+                    
+                     ForgetMeNot</p>
+                
+
+ <p className="text-center
+                text-gray-600 py-1">____________________</p>
+
+
+  <div 
+                    className=" 
+                        flex
+                        flex-col
+                        gap-4
+                        mt-10
+                        md:mt-15
+                        px-5
+                        text-[15px]
+                        md:text-[20px]
+                        md:text-center
+
+                        text-white/70
+                        
+                        font-light
+                    "
+                >
+                    <a href="#" className="hover:text-amber-200 transition">
+                        Resources
+                    </a>
+
+                    <a href="#" className="hover:text-amber-200 transition">
+                        About Us
+                    </a>
+
+                    <a href="#" className="hover:text-amber-200 transition">
+                        Features
+                    </a>
+                </div>
+
+                <p className="text-center
+                text-gray-600 py-10">____________________</p>
+
+                {/* Buttons */}
+                <div
+                    className="
+                        flex
+                        flex-col
+                        md:px-5
+                        px-4
+
+                        md:mt-10
+
+                        gap-3
+                        md:gap-5
+
+                        
+                    "
+                >
+                    <a href="#"
+                    
+                        className="
+                            relative
+
+                            px-3
+                            md:px-5
+                           
+
+                            py-1
+                            md:py-2
+
+                            rounded-xl
+
+                            bg-gradient-to-br
+                            to-indigo-900
+
+                            border
+                            border-amber-300/20
+
+                            text-white/90
+                            font-serif
+
+                            text-[60%]
+                            md:text-[95%]
+                            font-semibold
+
+                            text-center
+                            
+                            
+                
+
+
+                            
+                        "
+                    >
+                        Login
+                    </a>
+
+                    <a href="#"
+                        className="
+                            relative
+
+                            px-3
+                            md:px-6
+                            lg:px-8
+
+                            py-1
+                            md:py-2
+
+                            rounded-xl
+
+                            bg-gradient-to-tl
+                            from-amber-300/50
+                            to-amber-50
+
+                            border
+                            border-indigo-900/40
+
+                            text-indigo-900
+                            font-serif
+
+                            text-[60%]
+                            md:text-[95%]
+                            text-center
+                            font-semibold
+                           
+
+                           
+
+                            
+                        "
+                    >
+                        Sign up
+                    </a>
+                 </div>
+                </div>
+    
+        
+    </> );
 }
 
 export default Navbar;

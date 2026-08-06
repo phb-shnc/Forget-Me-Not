@@ -12,11 +12,15 @@ function Hero(){
         <div className=" py-6">
 
        <h1 className=" 
-                    lg:text-6xl 
+                    lg:text-6xl
+                    md:text-[48px]
                     text-2xl
                     text-balance 
                     font-bold 
-                    font-serif">
+                    font-serif
+                    md:px-8
+                    mx-5
+                    ">
                    
                         Defeat The Forgetting Curve
                         With Relentless Recall 

@@ -7,17 +7,19 @@ import Poblete from "../assets/images/Poblete.jpg";
 function Aboutus(){
         return (
 
-<section className="relative overflow-hidden">
+<section className="relative overflow-hidden mt-40">
 
 <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
 
     <p
         className="
-            mt-15
+          
+            uppercase
+            text-m
+            text-white/70 
+            tracking-[3px]
             text-center
-            text-white/80
-            text-[13px]
-            font-medium
+            mb-5
         "
     >
         About Us
@@ -25,14 +27,15 @@ function Aboutus(){
 
     <h2
         className="
-            lg:text-6xl
-            text-white/90
-            text-4xl
+            lg:text-5xl
+            md:text-4xl 
+            text-2xl
+            text-white
             text-balance
             font-bold
             font-serif
             text-center
-            lg:mb-25
+            lg:mb-20
             mb-20
         "
     >
@@ -238,6 +241,8 @@ function Aboutus(){
                 lg:min-h-[320px]
                 flex
                 flex-col
+                py-7
+                md:py-0
                 justify-center
                 items-center
                 text-center
@@ -311,12 +316,16 @@ function Aboutus(){
                         px-6
                         md:px-12
                         lg:px-24
-                        mt-16
+                        mt-20
                         mb-12
+                        max-w-7xl
+                        mx-auto
+                        
+                        
                     "
                 >
                     {/* Newsletter */}
-                    <div className="tracking-wider">
+                    <div className="tracking-wider flex flex-col justify-center items-center">
 
                         <p className="text-amber-50 text-sm md:text-base font-semibold mb-4">
                             Join our newsletter!
