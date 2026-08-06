@@ -41,25 +41,29 @@ function Process() {
     ];
 
     return (
-        <section className="relative  text-white py-24 overflow-hidden">
+        <section className=" max-w-6xl mx-auto py-40 text-white px-2 md:px-5 lg:px-10 ">
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mt-10 overflow-hidden">
-<div className="text-center lg:text-left">
-                <p className="inline-block mt-40 lg:mt-10 uppercase tracking-[3px] text-sm text-white/70">
+            <div className="  mx-auto overflow-hidden">
+<div className="text-left">
+                <p className=" uppercase md:mx-7 mx-6 lg:mx-1 md:mt-7 mt-50 tracking-[3px] text-m text-white/70">
                     Process
                 </p>
 
                 <h2 className=" lg:text-5xl 
+                        md:text-4xl
                          text-white
                         text-2xl
                         text-balance 
                         font-bold 
                         font-serif
-                        mt-3 leading-tight mt-auto  mr-[15%] md:mr-1 ">
+                        mx-6
+                        md:mx-7 mx-6 lg:mx-1
+                        
+                        mt-3 leading-tight mt-auto  mr-[15%] md:mr-12 ">
                     The work is simple but it is not easy
                 </h2>
 
-                <p className="text-white/70 mt-3 max-w-xl lg:text-[90%] font-light">
+                <p className="text-white/70 mt-3 max-w-xl md:mx-7 mx-6 lg:mx-1 lg:text-[130%] font-light">
                     A clear path from learning to lasting memory.
                 </p>
 </div>

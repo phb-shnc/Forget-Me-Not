@@ -71,13 +71,17 @@ function Algorithm() {
       max-w-6xl
       mx-auto
       text-white
-      py-30
+      py-40
+      
+      md:px-13
+      lg:px-10
+      
       "
     >
-        <div className="p-3 max-w-7xl py-10 mx-auto text-center tracking-wider">
-        <h2 className="leading-15 opacity-80">Algorithm</h2>      
-        <h1 className="leading-8 lg:text-5xl text-4xl font-bold font-serif ">The rhythm of memory</h1>
-        <p className="mt-5 lg:text-[90%] font-light text-[80%]">The system schedules your fights with the forgetting curve.
+        <div className="p-3 max-w-7xl  mb-10 mx-auto text-center tracking-wider">
+        <h2 className="leading-15 uppercase text-m text-white/70 tracking-[3px] ">Algorithm</h2>      
+        <h1 className="leading-8 lg:text-5xl md:text-4xl text-2xl text-balance font-bold font-serif ">The rhythm of memory</h1>
+        <p className="mt-5 text-white/70 lg:text-[130%] font-light">The system schedules your fights with the forgetting curve.
         It adapts to your honesty, bringing weak memories back sooner and letting strong ones rest.</p>
         </div>
 
