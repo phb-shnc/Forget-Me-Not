@@ -1,8 +1,7 @@
-import illustration from "../assets/images/illustration.jpg";
 import Partible from "../assets/images/Partible.jpg";
 import Lachica from "../assets/images/Lachica.jpg";
 import Poblete from "../assets/images/Poblete.jpg";
-
+import { ModelViewer } from "./3dFooterCanvas";
 
 function Aboutus(){
         return (
@@ -395,9 +394,11 @@ function Aboutus(){
             </div>
 
             {/* Illustration */}
-            <div className="flex justify-center items-start">
+            <div className="flex justify-center items-center h-[350px] -z-10">
 
-                <img
+                {/*Canvas for 3d models */}
+                <ModelViewer /> 
+                {/* <img
                     src={illustration}
                     alt="illustration"
                     className="
@@ -406,7 +407,7 @@ function Aboutus(){
                         md:max-w-sm
                         object-contain
                     "
-                />
+                /> */}
 
             </div>
 
@@ -455,5 +456,6 @@ function Aboutus(){
 </section>
     );
 }
+
 
 export default Aboutus;
