@@ -5,7 +5,7 @@ import Signup from "./Pages/Signup";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}> {/* local -> basename={"/Forget-Me-Not"} */}
       <Routes>
 
         <Route path="/" element={<LandingPage />} />
@@ -13,7 +13,6 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/signup" element={<Signup />} />
-        <Route path="*" element={<p>wddwdwwdwdw</p>} />
       </Routes>
     </BrowserRouter>
   );

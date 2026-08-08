@@ -8,7 +8,7 @@ const [isOpen ,setopen] = useState(false);
 
     return (
         <>
-        <nav
+        <nav 
             className="
                 fixed
                 top-5
