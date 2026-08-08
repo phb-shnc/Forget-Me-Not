@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
+import { Link } from "react-router-dom"; 
 
 function Navbar() {
 
@@ -148,7 +149,8 @@ const [isOpen ,setopen] = useState(false);
                         md:gap-5
                     "
                 >
-                    <a href="https://phb-shnc.github.io/Forget-Me-Not/login"
+                    <Link to="/login"
+                    onClick={() => setopen(false)}
                     
                         className="
                             relative
@@ -189,8 +191,8 @@ const [isOpen ,setopen] = useState(false);
                             duration-300
                         "
                     >
-                        Login
-                    </a>
+                        Log in
+                        </Link>
 
                     <a href="https://phb-shnc.github.io/Forget-Me-Not/signup"
                         className="
