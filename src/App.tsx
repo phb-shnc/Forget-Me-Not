@@ -5,7 +5,7 @@ import Signup from "./Pages/Signup";
 
 function App() {
   return (
-    <HashRouter basename="Forget-Me-Not"> {/* local -> basename={"/Forget-Me-Not"} */}
+    <HashRouter> {/* local -> basename={"/Forget-Me-Not"} */}
       <Routes>
 
         <Route path="/" element={<LandingPage />} />
