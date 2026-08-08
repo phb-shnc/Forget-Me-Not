@@ -82,7 +82,7 @@ const [isOpen ,setopen] = useState(false);
                 <div 
                     className=" 
                         flex
-
+                        relative
                         gap-2
                         md:gap-6
                         lg:gap-8
@@ -95,15 +95,45 @@ const [isOpen ,setopen] = useState(false);
                         font-serif
                     "
                 >
-                    <a href="#" className="hover:text-amber-200 transition">
+                    <a href="#" className="relative hover:text-amber-100 transition  after:bg-amber-100/30
+                        after:absolute
+                        after:h-1
+                        after:-bottom-1
+                        after:rounded-full
+                        after:left-0
+                        after:w-0
+                        after:transition-all
+                        after:duration-300
+
+                        hover:after:w-full">
                         Resources
                     </a>
 
-                    <a href="#" className="hover:text-amber-200 transition">
+                    <a href="#" className="relative hover:text-amber-100 transition  after:bg-amber-100/30
+                        after:absolute
+                        after:h-1
+                        after:-bottom-1
+                        after:rounded-full
+                        after:left-0
+                        after:w-0
+                        after:transition-all
+                        after:duration-300
+                        
+                        hover:after:w-full">
                         About Us
                     </a>
 
-                    <a href="#" className="hover:text-amber-200 transition">
+                    <a href="#" className="relative hover:text-amber-100 transition  after:bg-amber-100/30
+                        after:absolute
+                        after:h-1
+                        after:-bottom-1
+                        after:rounded-full
+                        after:left-0
+                        after:w-0
+                        after:transition-all
+                        after:duration-300
+
+                        hover:after:w-full">
                         Features
                     </a>
                 </div>

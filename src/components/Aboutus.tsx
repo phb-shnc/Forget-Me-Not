@@ -225,7 +225,7 @@ function Aboutus(){
     </div>
 </div>
 
-<footer>
+<footer >
 
     <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mt-16 md:mt-20">
         <div
@@ -305,6 +305,8 @@ function Aboutus(){
         </div>
 </div>
 
+<div className="relative bg-gray-600/50 h-[1px] mt-10"></div>
+
                 <div
                     className="
                         grid
@@ -315,8 +317,7 @@ function Aboutus(){
                         px-6
                         md:px-12
                         lg:px-24
-                        mt-20
-                        mb-12
+                        mt-10
                         max-w-7xl
                         mx-auto
                         
@@ -394,7 +395,7 @@ function Aboutus(){
             </div>
 
             {/* Illustration */}
-            <div className="flex justify-center items-center h-[350px] -z-10">
+            <div className="flex justify-center items-center h-[220px] -z-10">
 
                 {/*Canvas for 3d models */}
                 <ModelViewer /> 
@@ -441,7 +442,7 @@ function Aboutus(){
                     <a href="#" className="hover:text-gray-300 transition">Help Center</a>
                     <a href="#" className="hover:text-gray-300 transition">Resources</a>
                     <a href="#" className="hover:text-gray-300 transition">Community</a>
-                    <a href="#" className="hover:text-gray-300 transition">Contact</a>
+                    <a href="#" className="hover:text-gray-300 transition mb-5">Contact</a>
                 </div>
 
             </div>
