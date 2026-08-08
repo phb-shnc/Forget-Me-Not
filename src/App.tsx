@@ -5,7 +5,7 @@ import Signup from "./Pages/Signup";
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}> {/* local -> basename={"/Forget-Me-Not"} */}
+    <BrowserRouter basename="Forget-Me-Not"> {/* local -> basename={"/Forget-Me-Not"} */}
       <Routes>
 
         <Route path="/" element={<LandingPage />} />

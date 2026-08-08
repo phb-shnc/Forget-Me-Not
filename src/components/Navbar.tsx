@@ -148,7 +148,7 @@ const [isOpen ,setopen] = useState(false);
                         md:gap-5
                     "
                 >
-                    <a href="#"
+                    <a href="https://phb-shnc.github.io/Forget-Me-Not/login"
                     
                         className="
                             relative
@@ -192,7 +192,7 @@ const [isOpen ,setopen] = useState(false);
                         Login
                     </a>
 
-                    <a href="#"
+                    <a href="https://phb-shnc.github.io/Forget-Me-Not/signup"
                         className="
                             relative
 
