@@ -134,8 +134,8 @@ function Login() {
             <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Let's Continue your journey!</h1>
 
               <button
-                onClick={() => {setOpacity(true); setSlider(true)}}
-                className={ `${isopacity ? "bg-transparent" :"bg-purple-500"} py-2 px-6 rounded-xl 
+                onClick={() => {setOpacity(false); setSlider(false)}}
+                className={ `${isopacity ? "bg-purple-500" :"bg-transparent"} py-2 px-6 rounded-xl 
                 transition-all duration-400 hover:cursor-pointer hover:scale-105 border border-purple-500 hover:bg-amber-50/0 text-white font-semibold`}>
                
                <p  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
@@ -169,9 +169,9 @@ function Login() {
             <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Start your journey with us!</h1>
 
               <button
-                onClick={() => {setOpacity(false);
-                     setSlider(false) }}
-                className={ ` ${isopacity ? "bg-purple-500" :"bg-transparent"}   py-2 px-6 rounded-xl 
+                onClick={() => {setOpacity(true);
+                     setSlider(true) }}
+                className={ ` ${isopacity ? "bg-transparent" :"bg-purple-500"}   py-2 px-6 rounded-xl 
                 transition-all duration-400 hover:cursor-pointer hover:scale-105 border border-purple-500 hover:bg-amber-50/0 text-white font-semibold`}>
                
                <p  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}>
