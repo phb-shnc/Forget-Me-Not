@@ -37,11 +37,11 @@ function Login() {
                         from-indigo-900
                         via-indigo-950
                         to-indigo-800
-                        w-[990px]
+                        w-[890px]
                         shadow-yellow-50
                         shadow-xl
                         rounded-3xl
-                        min-h-[560px]
+                        min-h-[460px]
                         ">
 
             <div className=" absolute h-full w-1/2 top-0 left-0 z-10 ease-in-out transition 
@@ -94,7 +94,7 @@ function Login() {
         </form>
         </div>
 
-        <div className={`${isSlider ? "translate-x-full" : "translate-x-0"} absolute 
+        <div className={`${isSlider ? "translate-x-0" : "translate-x-full"} absolute 
         left-0
         top-0
         duration-700
@@ -124,21 +124,21 @@ function Login() {
         top-0
         left-0
         
-        ${isopacity ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}
+        ${isopacity ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         
         transition-opacity
         duration-500
         `}>
             
-            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-4xl font-bold bg-indigo-950 bg-clip-text text-center text-transparent`}>Already have an account?</h1>
-            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Let's Continue your journey!</h1>
+            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-4xl font-bold bg-indigo-950 bg-clip-text text-center text-transparent`}>Already have an account?</h1>
+            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Let's Continue your journey!</h1>
 
               <button
                 onClick={() => {setOpacity(true); setSlider(true)}}
                 className={ `${isopacity ? "bg-transparent" :"bg-purple-500"} py-2 px-6 rounded-xl 
                 transition-all duration-400 hover:cursor-pointer hover:scale-105 border border-purple-500 hover:bg-amber-50/0 text-white font-semibold`}>
                
-               <p  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}>
+               <p  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
                         Sign In</p> 
             </button>
 
@@ -157,7 +157,7 @@ function Login() {
         top-0
         right-0
 
-         ${isopacity ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+         ${isopacity ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}
         
         transition-opacity
         duration-500
@@ -165,8 +165,8 @@ function Login() {
         
         `}>
             
-            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-4xl text-center font-bold text-indigo-950 mx-8 mb-1`}>Don't have an account yet?</h1>
-            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Start your journey with us!</h1>
+            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-4xl text-center font-bold text-indigo-950 mx-8 mb-1`}>Don't have an account yet?</h1>
+            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Start your journey with us!</h1>
 
               <button
                 onClick={() => {setOpacity(false);
@@ -174,7 +174,7 @@ function Login() {
                 className={ ` ${isopacity ? "bg-purple-500" :"bg-transparent"}   py-2 px-6 rounded-xl 
                 transition-all duration-400 hover:cursor-pointer hover:scale-105 border border-purple-500 hover:bg-amber-50/0 text-white font-semibold`}>
                
-               <p  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
+               <p  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}>
                         Sign up</p> 
             </button>
 
