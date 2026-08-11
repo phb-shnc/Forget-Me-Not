@@ -194,7 +194,8 @@ const [isOpen ,setopen] = useState(false);
                         Log in
                         </Link>
 
-                    <a href="https://phb-shnc.github.io/Forget-Me-Not/signup"
+                    <Link to="/signup"
+                     onClick={() => setopen(false)}
                         className="
                             relative
 
@@ -236,7 +237,7 @@ const [isOpen ,setopen] = useState(false);
                         "
                     >
                         Sign up
-                    </a>
+                    </Link>
                  </div>
                 </div>
                 

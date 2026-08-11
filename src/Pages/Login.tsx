@@ -1,4 +1,4 @@
-import { use, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 
 
 function Login() {
@@ -15,8 +15,6 @@ function Login() {
     const[Confirmpassword, setConfirtPassword] = useState("");
 
 
-    
-    const[createdPass, setCreatedpass] = useState("");
 
     const handleSignup = (e: FormEvent<HTMLFormElement>) => { e.preventDefault();
 
@@ -35,7 +33,10 @@ function Login() {
 
     <div className="relative min-h-screen flex items-center justify-center
         bg-indigo-950 p-9">
-        <div className="relative bg-amber-100 
+        <div className="relative bg-gradient-to-br
+                        from-indigo-900
+                        via-indigo-950
+                        to-indigo-800
                         w-[990px]
                         shadow-yellow-50
                         shadow-xl
@@ -47,20 +48,31 @@ function Login() {
                 duration-700 opacity-100
             ">
 
+        
+
         <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 h-full px-10 justify-center items-center"
         >
-            <h1 className="text-2xl font-bold">
+
+            <div>
+                <h1 className="uppercase tracking-wide font-bold text-white/80 text-center py-5 text-[12px]">ForgetMeNot</h1>
+
+            <h1 className="text-2xl font-bold text-transparent bg-gradient-to-br bg-clip-text from-white to-purple-800">
                 Log In
             </h1>
 
+            <h1 className="text-l text-left font-bold text-transparent bg-gradient-to-br bg-clip-text from-white to-purple-800">
+                Welcome! Please log in your account.
+            </h1>
+        </div>
             <input
                 type="email"
                 placeholder="juancruz@gmail.com"
                 value={Loginemail}
                 onChange={(e) => setLoginEmail(e.target.value)}
-                className="border border-blue-900 px-9 py-2 rounded-xl"
+                className="bg-white font-semibold text-violet-900/50 px-9 py-2 rounded-full"
+                
             />
 
             <input
@@ -68,15 +80,15 @@ function Login() {
                 placeholder="Password"
                 value={Loginpassword}
                 onChange={(e) => setLoginPassword(e.target.value)}
-                className="border border-blue-900 px-9 py-2 rounded-xl"
+                className="bg-white font-semibold text-violet-900/50 px-9 py-2 rounded-full"
             />
 
             <button
                 type="submit"
-                className="bg-blue-950 text-white py-2 px-6 rounded-2xl  hover:bg-indigo-900
+                className="border border-violet-800 border-2 text-white py-2 px-6 rounded-xl font-semibold hover:bg-violet-800
                 transition duration-400 hover:cursor-pointer hover:scale-105"
             >
-                Sign In
+                Log In
             </button>
 
         </form>
@@ -89,7 +101,11 @@ function Login() {
         transition-transform
         ease-in-out
         z-20
-        bg-white
+        bg-gradient-to-bl
+        from-gray-300
+        via-purple-800
+        to-indigo-800
+
         h-full
         w-1/2
         rounded-3xl`}>
@@ -97,7 +113,7 @@ function Login() {
         </div>
 
 
-        <div className="absolute 
+        <div className={`absolute 
         z-30 
         h-full 
         flex 
@@ -107,19 +123,20 @@ function Login() {
         items-center
         top-0
         left-0
-
         
+        ${isopacity ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}
         
-        
-        ">
+        transition-opacity
+        duration-500
+        `}>
             
-            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}>Already have an account?</h1>
-            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}>Let's Continue your journey!</h1>
+            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-4xl font-bold bg-indigo-950 bg-clip-text text-center text-transparent`}>Already have an account?</h1>
+            <h1  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Let's Continue your journey!</h1>
 
               <button
                 onClick={() => {setOpacity(true); setSlider(true)}}
-                className={ ` ${isopacity ? "border-transparent" : "border-blue-950"} border border-blue-950 text-indigo-950 py-2 px-6 rounded-l 
-                transition-all duration-400 hover:cursor-pointer hover:scale-105`}>
+                className={ `${isopacity ? "bg-transparent" :"bg-purple-500"} py-2 px-6 rounded-xl 
+                transition-all duration-400 hover:cursor-pointer hover:scale-105 border border-purple-500 hover:bg-amber-50/0 text-white font-semibold`}>
                
                <p  className={`${isopacity ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}>
                         Sign In</p> 
@@ -129,7 +146,7 @@ function Login() {
 
         </div>
 
-        <div className="absolute 
+        <div className={`absolute 
         z-30 
         h-full 
         flex 
@@ -140,19 +157,22 @@ function Login() {
         top-0
         right-0
 
+         ${isopacity ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+        
+        transition-opacity
+        duration-500
         
         
-        
-        ">
+        `}>
             
-            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>Don't have an account yet?</h1>
-            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>Start you journey with us!</h1>
+            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-4xl text-center font-bold text-indigo-950 mx-8 mb-1`}>Don't have an account yet?</h1>
+            <h1  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500 text-l font-bold text-indigo-950 mb-8`}>Start your journey with us!</h1>
 
               <button
                 onClick={() => {setOpacity(false);
                      setSlider(false) }}
-                className={ ` ${isopacity ? "border-blue-950" :"border-transparent"} border border-blue-950 text-indigo-950 py-2 px-6 rounded-l 
-                transition-all duration-400 hover:cursor-pointer hover:scale-105`}>
+                className={ ` ${isopacity ? "bg-purple-500" :"bg-transparent"}   py-2 px-6 rounded-xl 
+                transition-all duration-400 hover:cursor-pointer hover:scale-105 border border-purple-500 hover:bg-amber-50/0 text-white font-semibold`}>
                
                <p  className={`${isopacity ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
                         Sign up</p> 
@@ -177,16 +197,24 @@ function Login() {
             className="flex flex-col gap-4 h-full justify-center items-center px-10 gap 4"
             >
 
-                <h1 className="text-2xl font-bold">
-                Sign Up
+<div>
+                <h1 className="uppercase tracking-wide font-bold text-white/80 text-center py-5 text-[12px]">ForgetMeNot</h1>
+
+            <h1 className="text-2xl font-bold text-transparent bg-gradient-to-br bg-clip-text from-white to-purple-800">
+                Create account
             </h1>
+
+            <h1 className="text-l text-left font-bold text-transparent bg-gradient-to-br bg-clip-text from-white to-purple-800">
+                Start practicing your memory now!
+            </h1>
+        </div>
 
             <input
                 type="email"
                 placeholder="juancruz@gmail.com"
                 value={Signupemail}
                 onChange={(e) => setSignupEmail(e.target.value)}
-                className="border border-blue-900 px-9 py-2 rounded-xl"
+                className="bg-white font-semibold text-violet-900/50 px-9 py-2 rounded-full"
             />
 
             <input
@@ -194,7 +222,7 @@ function Login() {
                 placeholder="Create a Password"
                 value={Signuppassword}
                 onChange={(e) => setSignupPassword(e.target.value)}
-                className="border border-blue-900 px-9 py-2 rounded-xl"
+                className="bg-white font-semibold text-violet-900/50 px-9 py-2 rounded-full"
             />
 
             <input
@@ -202,13 +230,13 @@ function Login() {
                 placeholder="Password"
                 value={Confirmpassword}
                 onChange={(e) => setConfirtPassword(e.target.value)}
-                className="border border-blue-900 px-9 py-2 rounded-xl"
+                className="bg-white font-semibold text-violet-900/50 px-9 py-2 rounded-full"
             />
 
             <button
                 type="submit"
-                className="bg-blue-950 text-white py-2 px-6 rounded-2xl hover:bg-indigo-900
-                transition duration-400 hover:cursor-pointer hover:scale-105 "
+                className="border border-violet-800 border-2 text-white py-2 px-6 rounded-xl font-semibold hover:bg-violet-800
+                transition duration-400 hover:cursor-pointer hover:scale-105"
             >
                 Sign Up
             </button>
