@@ -191,10 +191,17 @@ function LandingPage() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <Features />
+        
+        <section id="features" className="scroll-mt-24">
+          <Features />
+        </section>
+
         <Process />
         <Algorithm />
-        <Aboutus />
+
+        <section id="aboutus">
+          <Aboutus />
+        </section>
       </div>
 
     </div>
