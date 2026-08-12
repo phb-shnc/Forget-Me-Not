@@ -3,7 +3,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom"; 
 
-function Navbar() {
+function Navbar4Auth() {
 
 const [isOpen ,setopen] = useState(false);
 const scrollToSection = (id: string) => {
@@ -17,10 +17,13 @@ const scrollToSection = (id: string) => {
         <nav 
             className="
                 fixed
-                top-5
+                top-2
+                md:top-4
+                lg:top-1
                 left-1/2
                 -translate-x-1/2
 
+                md:w-[103%]
                 w-[95%]
                 max-w-[1800px]
 
@@ -35,17 +38,11 @@ const scrollToSection = (id: string) => {
 
                 py-2
 
-                md:py-3
+                md:py-2
 
-                bg-white/10
-                backdrop-blur-2xl
+               
+                
 
-                border
-                border-amber-50/50
-
-                rounded-xl
-                md:rounded-3xl
-                shadow-lg
 
                 z-50
             "
@@ -84,66 +81,8 @@ const scrollToSection = (id: string) => {
                     lg:gap-12
                 "
             >
-                {/* Navigation */}
-                <div 
-                    className=" 
-                        flex
-                        relative
-                        gap-2
-                        md:gap-6
-                        lg:gap-8
-                        text-[29%]
-                        md:text-xl
-                        md:text-base
-                        lg:text-l
-
-                        text-white
-                        font-serif
-                    "
-                >
-                    <button onClick={() => scrollToSection("aboutus")} className="relative hover:text-amber-100 transition  after:bg-amber-100/30
-                        after:absolute
-                        after:h-1
-                        after:-bottom-1
-                        after:rounded-full
-                        after:left-0
-                        after:w-0
-                        after:transition-all
-                        after:duration-300
-
-                        hover:after:w-full">
-                        Resources
-                    </button>
-
-                    <button onClick={() => scrollToSection("aboutus")} className="relative hover:text-amber-100 transition  after:bg-amber-100/30
-                        after:absolute
-                        after:h-1
-                        after:-bottom-1
-                        after:rounded-full
-                        after:left-0
-                        after:w-0
-                        after:transition-all
-                        after:duration-300
-                        
-                        hover:after:w-full">
-                        About Us
-                    </button>
-
-                    <button onClick = {() => scrollToSection("features")} className="relative hover:text-amber-100 transition  after:bg-amber-100/30
-                        after:absolute
-                        after:h-1
-                        after:-bottom-1
-                        after:rounded-full
-                        after:left-0
-                        after:w-0
-                        after:transition-all
-                        after:duration-300
-
-                        hover:after:w-full">
-                        Features
-                    </button>
-                </div>
-
+            
+                
                 {/* Buttons */}
                 <div
                     className="
@@ -173,7 +112,7 @@ const scrollToSection = (id: string) => {
                             to-indigo-900
 
                             border
-                            border-amber-300/50
+                            border-amber-300/30
 
                             text-white
                             font-serif
@@ -183,7 +122,7 @@ const scrollToSection = (id: string) => {
 
                             tracking-[0.25em]
 
-                            shadow-[0_0_15px_rgba(170,255,255,0.5)]
+                            shadow-[0_0_15px_rgba(170,255,255,0.1)]
 
                             before:absolute
                             before:inset-0
@@ -218,7 +157,7 @@ const scrollToSection = (id: string) => {
                             to-amber-50
 
                             border
-                            border-indigo-900/70
+                            border-indigo-900/50
 
                             text-indigo-900
                             font-serif
@@ -228,7 +167,7 @@ const scrollToSection = (id: string) => {
 
                             tracking-[0.25em]
 
-                            shadow-[0_0_15px_rgba(170,255,255,0.5)]
+                            shadow-[0_0_15px_rgba(170,255,255,0.1)]
 
                             before:absolute
                             before:inset-0
@@ -323,38 +262,8 @@ const scrollToSection = (id: string) => {
                 text-gray-600 py-1">____________________</p>
 
 
-  <div 
-                    className=" 
-                        flex
-                        flex-col
-                        gap-4
-                        mt-10
-                        md:mt-15
-                        px-5
-                        text-[15px]
-                        md:text-[20px]
-                        md:text-center
 
-                        text-white/70
-                        
-                        font-light
-                    "
-                >
-                    <button  onClick={() => scrollToSection("aboutus")} className="hover:text-amber-200 transition">
-                        Resources
-                    </button>
 
-                    <button  onClick={() => scrollToSection("aboutus")} className="hover:text-amber-200 transition">
-                        About Us
-                    </button>
-
-                    <button onClick={() => scrollToSection("features")} className="hover:text-amber-200 transition">
-                        Features
-                    </button>
-                </div>
-
-                <p className="text-center
-                text-gray-600 py-10">____________________</p>
 
                 {/* Buttons */}
                 <div
@@ -374,7 +283,6 @@ const scrollToSection = (id: string) => {
                 >
                     <Link to="/login"
                      onClick={() => setopen(false)}
-                    
                     
                         className="
                             relative
@@ -413,9 +321,8 @@ const scrollToSection = (id: string) => {
                         Login
                     </Link>
 
-                    <Link to="/login"
+                    <Link to="/signup"
                      onClick={() => setopen(false)}
-                    
                         className="
                             relative
 
@@ -458,4 +365,4 @@ const scrollToSection = (id: string) => {
     </> );
 }
 
-export default Navbar;
+export default Navbar4Auth;
