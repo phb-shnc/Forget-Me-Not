@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 function Navbar4Auth() {
 
-const [isOpen ,setopen] = useState(false);
-const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-        behavior: "smooth",
-    });
-};
+    const [isOpen ,setopen] = useState(false);
+    // const scrollToSection = (id: string) => {
+    //     document.getElementById(id)?.scrollIntoView({
+    //         behavior: "smooth",
+    //     });
+    // };
 
     return (
         <>
