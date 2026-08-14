@@ -1,7 +1,9 @@
 import { useState, type FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar4Auth from "../components/Navbar4Auth";
 
 function Login() {
+    const navigate = useNavigate();
 
     const[isopacity, setOpacity] = useState(false);
     const[isSlider, setSlider] = useState(false);
@@ -21,12 +23,16 @@ function Login() {
         console.log("Email:", Signupemail);
         console.log("Password:", Signuppassword);
         console.log("Created Password:", Confirmpassword)
+
+        navigate("/home");
     };
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => { e.preventDefault();
 
         console.log("Email:", Loginemail);
         console.log("Password:", Loginpassword);
+        
+        navigate("/home");
     };
 
     return(

@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import Homepage from "./Pages/Homepage";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route path="/login" element={<Login />} />
       
         <Route path="/signup" element={<Signup />} />
+
+        <Route path="/home" element={<Homepage />} />
       </Routes>
     </HashRouter>
   );
