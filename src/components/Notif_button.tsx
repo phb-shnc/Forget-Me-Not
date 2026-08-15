@@ -1,6 +1,9 @@
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { useState } from "react";
 
 function Notif_button() {
+    const [isOpen, setisOpen] = useState(false);
+
     const notif=[{
         id: 1,
             title: "Review Reminder",
@@ -24,11 +27,27 @@ function Notif_button() {
         },
     ]
 
+    const unreadcount = notif.filter((notif) => notif.unread).length
 
 
     return (
+    
+        <div className="relative  ">
 
-        <div></div>
+        <button onClick ={() => setisOpen(!isOpen)} 
+        className="
+        relative
+        text-center 
+        text-4xl 
+        text-amber-50"> {
+        }
+            
+            <IoMdNotificationsOutline />
+            {unreadcount > 0 && (<span className="absolute -top-1 rounded-full text-sm bg-red-500 w-5 h-5">{unreadcount}</span>)}
+            </button>
+
+
+    </div>
     );
 }
 

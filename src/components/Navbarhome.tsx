@@ -1,6 +1,6 @@
 import Notif_button from "./Notif_button";
 import Profilebutton from "./profilebutton";
-import Searchbar from "./Searchbar";
+import Searchbar from "./searchbar";
 
 function Navbarhome(){
 
@@ -89,11 +89,12 @@ function Navbarhome(){
                 <a>Review Session</a>
             </div>
 
-            <div>
+            <div className="flex ">
+                <div className="flex gap-3 ">
                 <Notif_button />
                 <Profilebutton />
                 <Searchbar />
-
+</div>
             </div>
 
             </div>
