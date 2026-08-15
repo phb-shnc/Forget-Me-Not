@@ -1,12 +1,16 @@
+import Navbarhome from "../components/Navbarhome";
+
 function Homepage() {
   return (
-    <div className="bg-indigo-950 min-h-screen w-screen">
-
+    <>
+    <Navbarhome />
+    <div className="relative min-h-screen bg-[#00002B] overflow-hidden isolate">
+    
     </div>
 
 
 
-
+</>
   );
 }
 
