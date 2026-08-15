@@ -1,5 +1,11 @@
+import Notif_button from "./Notif_button";
+import Profilebutton from "./profilebutton";
+import Searchbar from "./Searchbar";
+
 function Navbarhome(){
+
     return(
+        <>
         <nav className="
                 bg-amber-100/10
                 fixed
@@ -83,11 +89,18 @@ function Navbarhome(){
                 <a>Review Session</a>
             </div>
 
+            <div>
+                <Notif_button />
+                <Profilebutton />
+                <Searchbar />
+
+            </div>
+
             </div>
             
 
             </nav>
-
+        </>
     );
 }
 
