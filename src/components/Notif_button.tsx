@@ -43,7 +43,7 @@ function Notif_button() {
         }
             
             <IoMdNotificationsOutline />
-            {unreadcount > 0 && (<span className="absolute -top-1 rounded-full text-sm bg-red-500 w-5 h-5">{unreadcount}</span>)}
+            {unreadcount > 0 && (<span className="absolute top-1 rounded-full text-sm bg-red-600 w-3 h-3"></span>)}
             </button>
 
 

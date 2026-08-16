@@ -3,6 +3,10 @@ import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Homepage from "./Pages/Homepage";
+import Dashboard from "./Pages/dashboard";
+import TopicNlessons from "./Pages/topicNlessons";
+import Reviewsession from "./Pages/Reviewsession";
+
 
 function App() {
   return (
@@ -16,6 +20,13 @@ function App() {
         <Route path="/signup" element={<Signup />} />
 
         <Route path="/home" element={<Homepage />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/topicNlessons" element={<TopicNlessons />} />
+
+        <Route path="/Reviewsession" element={<Reviewsession />} />
+
       </Routes>
     </HashRouter>
   );

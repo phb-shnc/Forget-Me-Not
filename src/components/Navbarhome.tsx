@@ -1,8 +1,14 @@
 import Notif_button from "./Notif_button";
-import Profilebutton from "./profilebutton";
-import Searchbar from "./searchbar";
+import Profilebutton from "./Profilebutton";
+import Searchbar from "./Searchbar";
+
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 
 function Navbarhome(){
+
+    const [isOpen ,setopen] = useState(false);
 
     return(
         <>
@@ -84,9 +90,9 @@ function Navbarhome(){
                         text-white
                         font-serif
                     ">
-                <a>Dashboard</a>
-                <a>Topics & Lessons</a>
-                <a>Review Session</a>
+                <Link to="/Dashboard" >Dashboard</Link>
+                <Link to="/TopicNlessons">Topics & Lessons</Link>
+                <Link to="/Reviewsession">Review Session</Link>
             </div>
 
             <div className="flex ">
