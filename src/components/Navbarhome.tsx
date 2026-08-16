@@ -13,15 +13,18 @@ function Navbarhome(){
     return(
         <>
         <nav className="
-                bg-amber-100/10
+                bg-white/20
+                backdrop-blur-3xl
+                border
+                border-white
                 fixed
                 top-2
                 md:top-4
-                lg:top-1
+                lg:top-0
                 left-1/2
                 -translate-x-1/2
 
-                md:w-[103%]
+                md:w-[100%]
                 w-[95%]
                 max-w-[1800px]
 
@@ -33,6 +36,8 @@ function Navbarhome(){
                 sm:px-6
                 md:px-10
                 lg:px-14
+
+                rounded-b-3xl
 
                 py-2
 
@@ -98,8 +103,8 @@ function Navbarhome(){
             <div className="flex ">
                 <div className="flex gap-3 ">
                 <Notif_button />
-                <Profilebutton />
                 <Searchbar />
+                <Profilebutton />
 </div>
             </div>
 
