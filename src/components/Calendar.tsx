@@ -44,7 +44,7 @@ function Calendar() {
     };
 
     return (
-        <div className="w-[340px] m-20 rounded-3xl border border-white/40 p-5">
+        <div className="w-[340px] m-20 rounded-3xl border bg-indigo-950/40 border-white/90 p-5">
 
             {/* Calendar header */}
             <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ function Calendar() {
 
 
             {/* Weekdays */}
-            <div className="grid grid-cols-7 text-center mt-4">
+            <div className="grid grid-cols-7 text-center mt-2">
 
                 {[
                     "SUN",
@@ -99,7 +99,7 @@ function Calendar() {
 
 
             {/* Dates */}
-            <div className="grid grid-cols-7 gap-y-2 mt-2">
+            <div className="grid grid-cols-7 gap-y-0 mt-1">
 
                 {/* Empty spaces before the first day */}
                 {Array.from({ length: firstDay }).map((_, index) => (
