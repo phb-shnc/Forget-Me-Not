@@ -4,11 +4,20 @@ import Searchbar from "./Searchbar";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { constant } from "firebase/firestore/pipelines";
 
 
 function Navbarhome(){
 
     const [isOpen ,setopen] = useState(false);
+    const today =new Date();
+    
+    const formatteDate = new Date().toLocaleDateString("en-US" ,{
+        month:"numeric",
+        day:"numeric",
+        year:"numeric",
+
+    });
 
     return(
         <>
@@ -27,15 +36,17 @@ function Navbarhome(){
                 md:w-[100%]
                 w-[95%]
                 max-w-[1800px]
+                gap-23
 
+                justify-between
                 flex
                 items-center
-                justify-between
+                
 
                 px-4
                 sm:px-6
                 md:px-10
-                lg:px-14
+                lg:px-12
 
                 rounded-b-3xl
 
@@ -50,7 +61,7 @@ function Navbarhome(){
                 z-50
             ">
             
-                <div>
+                <div className="flex gap-10">
                 <a href="#"
                     className="
                         text-[75%]
@@ -67,21 +78,8 @@ function Navbarhome(){
                 >
                     ForgetMeNot
                 </a>
-            </div>
 
-             <div
-                className="
-                hidden
-                    lg:flex
-                    items-center
-                
-
-                    gap-8
-                    lg:gap-12
-                "
-            >
-
-            <div className=" 
+                 <div className=" 
                         flex
                         relative
                         gap-2
@@ -89,26 +87,30 @@ function Navbarhome(){
                         lg:gap-8
                         text-[29%]
                         md:text-xl
-                        md:text-base
-                        lg:text-l
+                        items-center
+                       
+                        lg:text-[15px]
 
                         text-white
-                        font-serif
+                        font-medium
+                        
                     ">
                 <Link to="/Dashboard" >Dashboard</Link>
                 <Link to="/TopicNlessons">Topics & Lessons</Link>
                 <Link to="/Reviewsession">Review Session</Link>
             </div>
 
-            <div className="flex ">
-                <div className="flex gap-3 ">
-                <Notif_button />
-                <Searchbar />
-                <Profilebutton />
-</div>
             </div>
 
-            </div>
+
+            <div className="flex gap-5 ">
+                <Notif_button />
+                <Searchbar />
+                <p className="text-white font-medium flex items-center">Username</p>
+                <Profilebutton />
+                <p className="text-white flex font-bold items-center">{formatteDate}</p>
+</div>
+        
             
 
             </nav>

@@ -16,13 +16,13 @@ function Searchbar() {
     );
 
     return (
-        <div className="relative">
+        <div className="relative flex items-center">
 
             <input
                 className="
                     bg-white
                     rounded-full
-                    p-2
+                    p-1
                     px-3
                     shadow-amber-50
                     shadow-sm

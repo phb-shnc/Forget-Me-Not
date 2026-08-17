@@ -15,7 +15,7 @@ function Profilebutton() {
 
         {isOpen && (<div className="absolute bg-violet-950 border shadow-2xl  border-violet-900 z-50 h-30 inline-block w-30 right-0 rounded-2xl "> 
                 <div className="flex flex-col">
-                    <button className="mt-3 tracking-wide text-white py-1 text-left px-2 hover:bg-violet-900 transition-colors duration-400">
+                    <button className="mt-3 self tracking-wide text-white py-1 text-left px-2 hover:bg-violet-900 transition-colors duration-400">
                         Profile
                     </button>
 
