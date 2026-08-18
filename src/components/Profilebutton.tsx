@@ -8,7 +8,8 @@ function Profilebutton() {
 
     return (
         <div className="relative">
-        <button className="flex items-center text-4xl text-center text-white "
+            {isOpen && <><div className="h-8 rounded-full w-8 absolute bg-white/50 top-[1px] right-[1.5px] shadow-black shadow-2xl"></div></>}
+        <button className="flex relative items-center text-4xl text-center text-white "
         onClick={() => setisOpen(!isOpen)}>
         
              <CgProfile />

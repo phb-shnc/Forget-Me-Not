@@ -1,5 +1,6 @@
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { useState } from "react";
+import { isolate } from "three/src/nodes/TSL.js";
 
 function Notif_button() {
     const [isOpen, setisOpen] = useState(false);
@@ -32,16 +33,21 @@ function Notif_button() {
 
     return (
     
+
         <div className="relative">
 
+        {isOpen && <><div className="h-10 rounded-full w-10 z-20 absolute bg-white/50 top-[0px] right-[-1.5px] shadow-black shadow-2xl"></div></>}
         <button className="
         relative
         text-center 
         text-4xl 
+        z-30
         text-amber-50" onClick={() => setisOpen(!isOpen)}> 
             
-            <IoMdNotificationsOutline />
+            <IoMdNotificationsOutline /> 
+           
             {unreadcount > 0 && (<span className="absolute top-1 rounded-full text-sm bg-red-600 w-3 h-3"></span>)}
+           
             </button>
         
 
@@ -58,6 +64,8 @@ function Notif_button() {
                             overflow-y-auto
                             scrollbar-none
                             rounded-xl">
+
+                                <h3 className="px-3 p-2 text-xl font-semibold tracking-wide text-white/85 shadow ">Notifications</h3>
             {notif.map((notif) => <div 
             key={notif.id}
             className={`rounded-l
@@ -71,13 +79,15 @@ function Notif_button() {
             
             
             ${notif.unread ? "bg-purple-900" : "bg-white/5"}`}>
-                <div className="flex justify-between px-3">
+                <div className="flex  gap-2 px-3">
+                    {notif.unread && <span className="h-2 w-2  bg-gradient-to-br from-indigo-400 to-red-700 rounded-full self-center" />}  
+                   
                     <h3 className="font-semibold text-white"> 
                         {notif.title}
                     </h3>
 
                 
-                 {notif.unread && <span className="h-2 w-2 bg-indigo-400 rounded-full self-center" />}   
+                  
                 
                 </div>
 
