@@ -2,7 +2,7 @@ function RecentLessons() {
     return (
         <div className="
             w-[340px]
-            
+            mt-20
             rounded-3xl
             border
            bg-indigo-950/40 
@@ -30,7 +30,7 @@ function RecentLessons() {
 
             {/* Empty state */}
             <div className="
-                min-h-[190px]
+                min-h-[170px]
                 flex
                 flex-col
                 items-center

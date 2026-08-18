@@ -7,8 +7,8 @@ function Homepage() {
     <>
     <Navbarhome />
     
-    <div className="relative  min-h-screen bg-[#00002B] overflow-hidden isolate">
-      <div className="flex items-baseline ">
+    <div className="relative min-h-screen bg-[#00002B] overflow-hidden isolate">
+      <div className="flex place-items-start m-2 gap-2">
           <Calendar />
           <RecentLessons />
     </div>

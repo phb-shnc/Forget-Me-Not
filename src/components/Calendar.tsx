@@ -44,7 +44,7 @@ function Calendar() {
     };
 
     return (
-        <div className="w-[340px] m-20 rounded-3xl border bg-indigo-950/40 border-white/90 p-5">
+        <div className="w-[340px] mt-20 ml-20 rounded-3xl border bg-indigo-950/40 border-white/90 p-5 h-[270px]">
 
             {/* Calendar header */}
             <div className="flex items-center justify-between">
@@ -99,7 +99,7 @@ function Calendar() {
 
 
             {/* Dates */}
-            <div className="grid grid-cols-7 gap-y-0 mt-1">
+            <div className="grid grid-cols-7 gap-y-1 mt-1">
 
                 {/* Empty spaces before the first day */}
                 {Array.from({ length: firstDay }).map((_, index) => (
@@ -113,8 +113,8 @@ function Calendar() {
                         key={day}
                         onClick={() => setSelectedDate(day)}
                         className={`
-                            h-9
-                            w-9
+                            bg-blue-900
+                            w-8
                             rounded-full
                             text-white
                             transition
