@@ -44,12 +44,16 @@ function Notif_button() {
             {unreadcount > 0 && (<span className="absolute top-1 rounded-full text-sm bg-red-600 w-3 h-3"></span>)}
             </button>
         
+
+        
         {isOpen && <> <div className="absolute border
                             border-violet-900
                             bg-indigo-900
                             h-60
                             w-100
                             right-1
+                            shadow-2xl
+                            shadow-black
                         
                             overflow-y-auto
                             scrollbar-none

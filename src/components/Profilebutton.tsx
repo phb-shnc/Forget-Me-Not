@@ -14,19 +14,7 @@ function Profilebutton() {
              <CgProfile />
         </button>
 
-  {isOpen && ( <><div
-                        className="
-                            fixed
-                            inset-0
-                            bg-black/20
-                            h-screen
-                            
-                            z-40
-                        "
-                        onClick={() => setisOpen(false)}
-                    />  
-        
-       <div className="absolute
+  {isOpen && ( <> <div className="absolute
                             right-0
                             top-full
                             mt-3
@@ -40,7 +28,8 @@ function Profilebutton() {
                             bg-indigo-900
                             p-3
                             text-white
-                            shadow-2xl"> 
+                            shadow-2xl
+                            shadow-black"> 
 
 
                 <div className="flex flex-col">
