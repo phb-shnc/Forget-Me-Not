@@ -14,25 +14,38 @@ function Profilebutton() {
              <CgProfile />
         </button>
 
-       
-       <div className="absolute 
-                    bg-indigo-900 
-                    border 
-                    shadow-2xl  
-                    border-violet-900 
-                    text-white
-                    z-50 
-                    h-90 
-                    inline-block 
-                    p-3
-                    w-70 
-                    right-0 
-                    rounded-2xl "> 
+  {isOpen && ( <><div
+                        className="
+                            fixed
+                            inset-0
+                            bg-black/30
+                            h-screen
+                            
+                            z-40
+                        "
+                        onClick={() => setisOpen(false)}
+                    />  
+        
+       <div className="absolute
+                            right-0
+                            top-full
+                            mt-3
+
+                            z-50
+
+                            w-[280px]
+                            rounded-2xl
+                            border
+                            border-violet-900
+                            bg-indigo-900
+                            p-3
+                            text-white
+                            shadow-2xl"> 
 
 
                 <div className="flex flex-col">
                     
-                    <p className="mt-3 self tracking-wide text-left px-2">
+                    <p className="mt-3 self tracking-wide text-left px-2 self-center">
                         Profile & Settings
                     </p>
 
@@ -40,25 +53,72 @@ function Profilebutton() {
                         Manage your account and study preferences
                     </p>
 
-                    <div className="flex flex-col ">
+                    <div className="flex flex-col 
+                    font-light
+                    ">
 
-                    <button className="mt-3 self tracking-wide border-y-gray-500 border-y py-4 text-left px-2 hover:bg-violet-900 transition-colors duration-400">
+                    <button className="
+                                mt-3 
+                                tracking-wide 
+                                border-y-gray-500 
+                                border-y 
+                                py-4 
+                                text-left 
+                                px-2 
+                                hover:bg-violet-900 
+                                transition-colors 
+                                duration-400">
                         Personal Information
                     </button>
 
-                    <button className=" tracking-wide  py-4 text-left px-2 border-b-gray-500 border-b hover:bg-violet-900 transition-colors duration-400">
+                    <button className=" 
+                                tracking-wide 
+                                py-4 
+                                text-left 
+                                px-2 
+                                border-b-gray-500 
+                                border-b 
+                                hover:bg-violet-900 
+                                transition-colors 
+                                duration-400">
                         Study Reminders
                     </button>
 
-                    <button className="font-medium tracking-wide  py-4 text-left px-2 border-b-gray-500 border-b hover:hover:bg-violet-900 transition-colors duration-400">
+                    <button className="
+                                tracking-wide 
+                                py-4 
+                                text-left 
+                                px-2 
+                                border-b-gray-500 
+                                border-b 
+                                hover:hover:bg-violet-900 
+                                transition-colors 
+                                duration-400">
                         Appearance
                     </button>
 
-                    <button className="font-medium tracking-wide  py-4 text-left px-2 border-b-gray-500 border-b hover:hover:bg-violet-900 transition-colors duration-400">
+                    <button className="
+                                tracking-wide 
+                                py-4 
+                                text-left 
+                                px-2 
+                                border-b-gray-500 
+                                border-b 
+                                hover:hover:bg-violet-900 
+                                transition-colors 
+                                duration-400">
                         Data & Account
                     </button>
 
-                    <button className="relative font-medium tracking-wide self-center flex  py-2 text-left px-2 hover:text-violet-300 
+                    <button className="relative 
+                        
+                        tracking-wide 
+                        self-center 
+                        flex  
+                        py-2 
+                        text-left 
+                        px-2 
+                        hover:text-violet-300 
                         after:bg-violet-600
                         after:bottom-1
                         after:h-0.5
@@ -70,11 +130,12 @@ function Profilebutton() {
                     </button>
                     </div>
             </div>
-            </div>
-            
-            
-            
- </div>
+             </div>
+
+        </>  )}
+         </div>
+  
+           
 
 
     );
