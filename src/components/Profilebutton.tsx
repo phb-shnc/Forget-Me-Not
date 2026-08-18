@@ -1,6 +1,6 @@
 import { CgProfile } from "react-icons/cg";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 function Profilebutton() {
 
@@ -18,7 +18,7 @@ function Profilebutton() {
                         className="
                             fixed
                             inset-0
-                            bg-black/30
+                            bg-black/20
                             h-screen
                             
                             z-40
@@ -57,7 +57,7 @@ function Profilebutton() {
                     font-light
                     ">
 
-                    <button className="
+                    <Link to="#" className="
                                 mt-3 
                                 tracking-wide 
                                 border-y-gray-500 
@@ -69,9 +69,9 @@ function Profilebutton() {
                                 transition-colors 
                                 duration-400">
                         Personal Information
-                    </button>
+                    </Link>
 
-                    <button className=" 
+                    <Link to="#" className=" 
                                 tracking-wide 
                                 py-4 
                                 text-left 
@@ -82,9 +82,9 @@ function Profilebutton() {
                                 transition-colors 
                                 duration-400">
                         Study Reminders
-                    </button>
+                    </Link>
 
-                    <button className="
+                    <Link  to="#" className="
                                 tracking-wide 
                                 py-4 
                                 text-left 
@@ -95,9 +95,9 @@ function Profilebutton() {
                                 transition-colors 
                                 duration-400">
                         Appearance
-                    </button>
+                    </Link>
 
-                    <button className="
+                    <Link to="#"  className="
                                 tracking-wide 
                                 py-4 
                                 text-left 
@@ -108,9 +108,9 @@ function Profilebutton() {
                                 transition-colors 
                                 duration-400">
                         Data & Account
-                    </button>
+                    </Link>
 
-                    <button className="relative 
+                    <Link to="#"  className="relative 
                         
                         tracking-wide 
                         self-center 
@@ -127,7 +127,7 @@ function Profilebutton() {
                         after:rounded-2xl
                         transition-colors duration-400">
                         Log out
-                    </button>
+                    </Link>
                     </div>
             </div>
              </div>
