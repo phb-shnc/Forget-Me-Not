@@ -8,7 +8,7 @@ export default defineConfig({
         tailwindcss(),
     ],
 
-    base: "/Forget-Me-Not/",
+    base: "/",
 
     server: {
         watch: {
