@@ -6,7 +6,7 @@ function Dailyquote() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
-   useEffect(() => {
+useEffect(() => {
     const fetchQuote = async () => {
         try {
             const response = await fetch(
