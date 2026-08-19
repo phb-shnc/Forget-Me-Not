@@ -3,8 +3,8 @@ import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Homepage from "./Pages/Homepage";
-import Dashboard from "./Pages/dashboard";
-import TopicNlessons from "./Pages/topicNlessons";
+import Dashboard from "./Pages/Dashboard";
+import TopicNlessons from "./Pages/TopicNlessons";
 import Reviewsession from "./Pages/Reviewsession";
 
 

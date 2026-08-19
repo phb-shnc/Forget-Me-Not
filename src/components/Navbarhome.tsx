@@ -3,14 +3,10 @@ import Profilebutton from "./Profilebutton";
 import Searchbar from "./Searchbar";
 
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { constant } from "firebase/firestore/pipelines";
+// import { constant } from "firebase/firestore/pipelines";
 
 
 function Navbarhome(){
-
-    const [isOpen ,setopen] = useState(false);
-    const today =new Date();
     
     const formatteDate = new Date().toLocaleDateString("en-US" ,{
         month:"numeric",

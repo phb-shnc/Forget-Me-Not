@@ -1,6 +1,6 @@
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { useState } from "react";
-import { isolate } from "three/src/nodes/TSL.js";
+// import { isolate } from "three/src/nodes/TSL.js";
 
 function Notif_button() {
     const [isOpen, setisOpen] = useState(false);
