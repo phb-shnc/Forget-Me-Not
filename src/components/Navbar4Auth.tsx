@@ -50,7 +50,7 @@ function Navbar4Auth() {
 
             {/* Logo */}
             <div>
-                <a href="/LandingPage"
+                <a href="#"
                     className="
                         text-[75%]
                         sm:text-xl
