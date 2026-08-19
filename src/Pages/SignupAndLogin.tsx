@@ -59,6 +59,8 @@ function Signup() {
                 return "Error: Password should be at least 6 characters.";
             case "auth/missing-password":
                 return "Error: Please enter a password.";
+            case "auth/mis ":
+                return "Error: Please enter a password.";
             default:
                 return "An error occurred. Please try again.";
         }

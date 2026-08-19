@@ -1,6 +1,7 @@
 import Navbarhome from "../components/Navbarhome";
 import Calendar from "../components/Calendar";
 import RecentLessons from "../components/RecentLessons";
+import NoteToSelf from "../components/Note";
 
 function Homepage() {
   return (
@@ -9,9 +10,10 @@ function Homepage() {
     <Navbarhome />
     </div>
     <div className="relative min-h-screen bg-[#00002B] overflow-hidden isolate">
-      <div className="flex place-items-start m-2 gap-2">
+      <div className="flex place-items-start m-2 gap-2 px-7">
           <Calendar />
           <RecentLessons />
+          <NoteToSelf />
     </div>
     </div>
 
