@@ -1,34 +1,59 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import Login from "./Pages/Login";
-import Signup from "./Pages/Signup";
+import SignupAndLogin from "./Pages/SignupAndLogin";
 import Homepage from "./Pages/Homepage";
 import Dashboard from "./Pages/Dashboard";
 import TopicNlessons from "./Pages/TopicNlessons";
 import Reviewsession from "./Pages/Reviewsession";
-
+import ProtectedRoute from "./components/ProtectedRoute"; 
 
 function App() {
   return (
-    <HashRouter> {/* local -> basename={"/Forget-Me-Not"} */}
+    <BrowserRouter>
       <Routes>
-
+        {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<SignupAndLogin />} />
+        <Route path="/signup" element={<SignupAndLogin />} />
 
-        <Route path="/login" element={<Login />} />
-      
-        <Route path="/signup" element={<Signup />} />
+        {/* Protected Routes (Require Authentication) */}
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Homepage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/topicNlessons"
+          element={
+            <ProtectedRoute>
+              <TopicNlessons />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/Reviewsession"
+          element={
+            <ProtectedRoute>
+              <Reviewsession />
+            </ProtectedRoute>
+          }
+        />
 
-        <Route path="/home" element={<Homepage />} />
-
-        <Route path="/dashboard" element={<Dashboard />} />
-
-        <Route path="/topicNlessons" element={<TopicNlessons />} />
-
-        <Route path="/Reviewsession" element={<Reviewsession />} />
-
+        {/* Fallback redirect */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
