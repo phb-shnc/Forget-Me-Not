@@ -41,9 +41,29 @@ useEffect(() => {
     }
 
     return (
-        <div>
-            <p>"{quote}"</p>
-            <p>— {author}</p>
+        <div className="">
+        <div className="w-[220px]
+            h-[220px]
+            mt-5
+            ml-20
+            mb-10
+            rounded-full
+            p-9
+            border
+            text-center
+            flex
+            flex-col
+            justify-center
+            bg-indigo-950/40 
+            border-white/90
+            overflow-hidden
+            text-white
+            text-[12px]
+            ">
+            <p className="font-bold text-center ">Quote of the day</p>
+            <p className="border-b-gray-700 border-t mt-2 p-2 font-semibold">"{quote}"</p>
+            <p className="text-[10px] text-right">— {author}</p>
+        </div>
         </div>
     );
 }
