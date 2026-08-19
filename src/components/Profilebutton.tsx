@@ -1,10 +1,24 @@
 import { CgProfile } from "react-icons/cg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
+
+import { signOut } from "firebase/auth";
+import { auth } from "../firebaseConfig";
 
 function Profilebutton() {
 
     const [isOpen, setisOpen] = useState(false);
+    const navigate = useNavigate();
+
+    // logout function
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            navigate("/login"); // Redirect user to login page
+        } catch (error) {
+            console.error("Error logging out:", error);
+        }
+    };
 
     return (
         <div className="relative">
@@ -100,24 +114,12 @@ function Profilebutton() {
                         Data & Account
                     </Link>
 
-                    <Link to="#"  className="relative 
-                        
-                        tracking-wide 
-                        self-center 
-                        flex  
-                        py-2 
-                        text-left 
-                        px-2 
-                        hover:text-violet-300 
-                        after:bg-violet-600
-                        after:bottom-1
-                        after:h-0.5
-                        after:w-15
-                        after:absolute
-                        after:rounded-2xl
-                        transition-colors duration-400">
+                    <button 
+                        onClick={handleLogout}
+                        className="relative tracking-wide self-center flex py-2 text-left px-2 mt-2 hover:text-violet-300 after:bg-violet-600 after:bottom-1 after:h-0.5 after:w-15 after:absolute after:rounded-2xl transition-colors duration-400 hover:cursor-pointer"
+                    >
                         Log out
-                    </Link>
+                    </button>
                     </div>
             </div>
              </div>
