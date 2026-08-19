@@ -1,5 +1,4 @@
-import { use, useEffect, useState } from "react";
-import type { PiPlaceholder } from "react-icons/pi";
+import {useEffect, useState } from "react";
 
 function NoteToSelf() {
    const [note, setNote] = useState(() => {
