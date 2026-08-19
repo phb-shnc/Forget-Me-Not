@@ -2,6 +2,7 @@ import Navbarhome from "../components/Navbarhome";
 import Calendar from "../components/Calendar";
 import RecentLessons from "../components/RecentLessons";
 import NoteToSelf from "../components/Note";
+import Dailyquote from "../components/Dailyquote";
 
 function Homepage() {
   return (
@@ -14,7 +15,9 @@ function Homepage() {
           <Calendar />
           <RecentLessons />
           <NoteToSelf />
+        
     </div>
+    <Dailyquote />
     </div>
 
 
