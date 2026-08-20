@@ -16,7 +16,8 @@ return (
             border
             bg-indigo-950/40 
             border-white/90
-            overflow-hidden 
+            
+            
             w-[340px]
             min-h-[223px]">
 
@@ -36,11 +37,11 @@ return (
                         placeholder="Add your notes here"
                     
                         className="w-[340px] 
-                                    fixed 
+                                    overflow-y-auto
+                                    scrollbar-none
                                     h-40 
                                     resize-none 
                                     rounded-xl 
-                                    overflow-hidden 
                                     border-none 
                                     outline-0 
                                     p-5 
