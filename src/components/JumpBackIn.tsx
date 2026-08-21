@@ -41,9 +41,11 @@ return(
         <div className="text-white">
             <h3 className="border-b text-2xl text-center py-1 " >Jump back on</h3>
 
+            
+
             <div className="flex justify-evenly p-2 gap-0  ">
 
-               
+                <p className="h-40 w-40 border border-8 self-center rounded-full"></p>
 
 <div className="
             bg-indigo-950/40 border-white/50 border w-80 h-40 rounded-2xl p-3 self-center">
