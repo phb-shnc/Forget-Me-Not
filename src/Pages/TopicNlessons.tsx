@@ -16,10 +16,10 @@ function TopicNlessons() {
                 <div className="px-40 ">
                     <div className="pt-30 flex justify-between">
                         <p className="text-gray-400">5 Topics 6 Lessons</p>
-                        <button className="bg-indigo-300 p-1 px-5 py-2 rounded-2xl">+ New Topic</button>
+                        <button className="bg-indigo-300 p-1 px-5 py-2 rounded-2xl hover:bg-indigo-400 transition-colors duration-250 cursor-pointer">+ New Topic</button>
                     </div>
 
-                    <div className="bg-indigo-900 flex flex-col gap-4 h-40 py-3 w-60 mt-9 rounded-2xl border border-white text-white">
+                    <div className="bg-indigo-900 flex flex-col gap-4 h-40 py-3 w-60 mt-9 rounded-2xl border border-white text-white hover:scale-102 transition duration-500 cursor-pointer">
                          <div className="flex mt-3 px-4 text-4xl w-full justify-between ">
                             <LiaBookSolid />
 
