@@ -1,13 +1,13 @@
 import Navbarhome from "../components/Navbarhome";
-import { useState } from "react";
+// import { useState } from "react";
 import { LiaBookSolid } from "react-icons/lia";
 
-    interface lessons{ topics: string, qty:number, };
-    interface Topicprops{ Topic:lessons, }
+//    interface lessons{ topics: string, qty:number, };
+//    interface Topicprops{ Topic:lessons, }
 
 
 function TopicNlessons() {
- const [isTopic, setTopic] = useState(false);
+ //const [isTopic, setTopic] = useState(false);
     return (
         <>
             <Navbarhome />
