@@ -45,6 +45,19 @@ function Signup() {
     }, []);
 
 
+    const getErrorCode = (error: unknown) => {
+        if (
+            typeof error === "object" &&
+            error !== null &&
+            "code" in error &&
+            typeof error.code === "string"
+        ) {
+            return error.code;
+        }
+
+        return "";
+    };
+
     const getFriendlyErrorMessage = (errorCode: string) => {
         switch (errorCode) {
             case "auth/invalid-email":
@@ -81,9 +94,10 @@ function Signup() {
             setLoading(true);
             await signInWithEmailAndPassword(auth, Loginemail, Loginpassword);
             navigate("/home");
-        } catch (error: any) {
-            console.error("Login Error:", error.code);
-            setLoginError(getFriendlyErrorMessage(error.code));
+        } catch (error: unknown) {
+            const errorCode = getErrorCode(error);
+            console.error("Login Error:", errorCode);
+            setLoginError(getFriendlyErrorMessage(errorCode));
         } finally {
             setLoading(false);
         }
@@ -120,9 +134,10 @@ function Signup() {
             });
 
             navigate("/home");
-        } catch (error: any) {
-            console.error("Signup Error:", error.code);
-            setSignupError(getFriendlyErrorMessage(error.code));
+        } catch (error: unknown) {
+            const errorCode = getErrorCode(error);
+            console.error("Signup Error:", errorCode);
+            setSignupError(getFriendlyErrorMessage(errorCode));
         } finally {
             setLoading(false);
         }

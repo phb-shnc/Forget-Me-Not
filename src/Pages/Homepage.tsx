@@ -5,34 +5,28 @@ import NoteToSelf from "../components/Note";
 import Dailyquote from "../components/Dailyquote";
 import JumpBackIn from "../components/JumpBackIn";
 function Homepage() {
-
   const review = {
-  subject: "Mathematics",
-  topics: "Derivatives",
-  percent: 75,
-  time: "2 hours ago",
-};
+    subject: "Mathematics",
+    topics: "Derivatives",
+    percent: 75,
+    time: "2 hours ago",
+  };
 
   return (
     <>
-    <div className="z-50">
-    <Navbarhome />
-    </div>
-    <div className="relative min-h-screen bg-[#00002B] overflow-hidden isolate ">
-      <div className="flex place-items-start m-2 gap-2 px-7">
+      <Navbarhome />
+      <main className="min-h-screen overflow-x-clip bg-[#00002B] px-4 pb-10 pt-24 sm:px-6 lg:px-8">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-3">
           <Calendar />
           <RecentLessons />
           <NoteToSelf />
-      </div>
-      <div className=" flex place-items-start m-2 gap-2 px-7">
-    <Dailyquote />
-    <JumpBackIn review={review} />
-      </div>
-    </div>
-
-
-
-</>
+          <Dailyquote />
+          <div className="sm:col-span-2">
+            <JumpBackIn review={review} />
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
 

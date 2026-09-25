@@ -44,19 +44,18 @@ function Calendar() {
     };
 
     return (
-        <div className="w-[340px] mt-15 ml-20 rounded-3xl border bg-indigo-950/40 border-white/90 p-5 h-[270px]">
-
-            {/* Calendar header */}
+        <div className="flex h-full min-h-[300px] w-full min-w-0 flex-col rounded-3xl border border-white/90 bg-indigo-950/40 p-4 sm:p-5">
             <div className="flex items-center justify-between">
-
                 <button
+                    type="button"
+                    aria-label="Previous month"
                     onClick={previousMonth}
-                    className="text-4xl text-white hover:text-purple-300"
+                    className="flex h-8 w-8 items-center justify-center rounded-full text-3xl leading-none text-white transition-colors hover:bg-white/10 hover:text-purple-300 sm:h-9 sm:w-9"
                 >
                     ‹
                 </button>
 
-                <h2 className="text-white font-bold tracking-widest">
+                <h2 className="text-center text-base font-bold tracking-wider text-white sm:text-lg">
                     {currentDate
                         .toLocaleString("default", {
                             month: "long",
@@ -66,18 +65,16 @@ function Calendar() {
                 </h2>
 
                 <button
+                    type="button"
+                    aria-label="Next month"
                     onClick={nextMonth}
-                    className="text-4xl text-white hover:text-purple-300"
+                    className="flex h-8 w-8 items-center justify-center rounded-full text-3xl leading-none text-white transition-colors hover:bg-white/10 hover:text-purple-300 sm:h-9 sm:w-9"
                 >
                     ›
                 </button>
-
             </div>
 
-
-            {/* Weekdays */}
-            <div className="grid grid-cols-7 text-center mt-2">
-
+            <div className="mt-3 grid grid-cols-7 text-center text-[11px] font-semibold text-white/60 sm:text-xs">
                 {[
                     "SUN",
                     "MON",
@@ -87,58 +84,48 @@ function Calendar() {
                     "FRI",
                     "SAT",
                 ].map((day) => (
-                    <div
-                        key={day}
-                        className="text-white/60 font-semibold text-sm"
-                    >
-                        {day}
-                    </div>
+                    <div key={day}>{day}</div>
                 ))}
-
             </div>
 
-
-            {/* Dates */}
-            <div className="grid grid-cols-7 gap-y-1 mt-1">
-
-                {/* Empty spaces before the first day */}
+            <div className="mt-2 grid grid-cols-7 gap-y-1">
                 {Array.from({ length: firstDay }).map((_, index) => (
                     <div key={`empty-${index}`} />
                 ))}
 
+                {days.map((day) => {
+                    const today = new Date();
+                    const isToday =
+                        day === today.getDate() &&
+                        month === today.getMonth() &&
+                        year === today.getFullYear();
 
-                {/* Dates */}
-                {days.map((day) => (
-                    <button
-                        key={day}
-                        onClick={() => setSelectedDate(day)}
-                        className={`
-                            bg-blue-900
-                            w-8
-                            rounded-full
-                            text-white
-                            transition
-
-                            ${
+                    return (
+                        <button
+                            type="button"
+                            key={day}
+                            onClick={() => setSelectedDate(day)}
+                            aria-current={isToday ? "date" : undefined}
+                            className={`flex aspect-square w-full max-w-8 items-center justify-center justify-self-center rounded-full bg-blue-900 text-xs text-white transition-colors sm:text-sm ${
                                 selectedDate === day
                                     ? "bg-purple-500"
                                     : "hover:bg-purple-500/50"
-                            }
-                        `}
-                    >
-                        {day}
-                    </button>
-                ))}
-
+                            } ${
+                                isToday
+                                    ? "font-extrabold ring-2 ring-cyan-300 ring-offset-2 ring-offset-indigo-950"
+                                    : ""
+                            }`}
+                        >
+                            {day}
+                        </button>
+                    );
+                })}
             </div>
 
-
-            {/* Selected date */}
             {selectedDate !== null && (
-                <div className="mt-5 text-center text-white">
+                <div className="mt-3 rounded-xl bg-white/5 px-3 py-2 text-center text-xs text-white/80">
                     Selected date:
-
-                    <p className="font-bold text-purple-300">
+                    <p className="mt-1 text-sm font-bold text-purple-300">
                         {currentDate.toLocaleString("default", {
                             month: "long",
                         })}{" "}
@@ -146,7 +133,6 @@ function Calendar() {
                     </p>
                 </div>
             )}
-
         </div>
     );
 }

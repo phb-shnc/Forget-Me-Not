@@ -37,32 +37,28 @@ function Notif_button() {
         <div className="relative">
 
         {isOpen && <><div className="h-10 rounded-full w-10 z-20 absolute bg-white/50 top-[0px] right-[-1.5px] shadow-black shadow-2xl"></div></>}
-        <button className="
-        relative
-        text-center 
-        text-4xl 
-        z-30
-        text-amber-50" onClick={() => setisOpen(!isOpen)}> 
-            
-            <IoMdNotificationsOutline /> 
-           
-            {unreadcount > 0 && (<span className="absolute top-1 rounded-full text-sm bg-red-600 w-3 h-3"></span>)}
-           
-            </button>
+        <button
+            type="button"
+            aria-label="Toggle notifications"
+            className="relative z-30 flex h-9 w-9 items-center justify-center rounded-full text-3xl text-amber-50 transition-colors hover:bg-white/10"
+            onClick={() => setisOpen(!isOpen)}
+        >
+            <IoMdNotificationsOutline />
+
+            {unreadcount > 0 && (
+                <span className="absolute right-0.5 top-0.5 h-3 w-3 rounded-full bg-red-600 ring-2 ring-[#00002B]" />
+            )}
+        </button>
         
 
         
-        {isOpen && <> <div className="absolute border
+            {isOpen && <> <div className="absolute right-0 top-full mt-2 h-60 w-80 max-w-[calc(100vw-2rem)] border
                             border-violet-900
                             bg-indigo-900
-                            h-60
-                            w-100
-                            right-1
                             shadow-2xl
                             shadow-black
                         
                             overflow-y-auto
-                            scrollbar-none
                             rounded-xl">
 
                                 <h3 className="px-3 p-2 text-xl font-semibold tracking-wide text-white/85 shadow ">Notifications</h3>

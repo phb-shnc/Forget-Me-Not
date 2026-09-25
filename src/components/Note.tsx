@@ -8,49 +8,20 @@ function NoteToSelf() {
    useEffect(() => {localStorage.setItem("notesnia", note);},[note]);
 
 return (
+    <div className="flex h-full min-h-[270px] w-full min-w-0 flex-col overflow-hidden rounded-3xl border border-white/90 bg-indigo-950/40">
+        <div className="flex min-h-0 flex-1 flex-col">
+            <h3 className="border-b border-white/40 p-3 text-center text-lg font-bold text-amber-50 sm:text-xl">
+                Notes
+            </h3>
 
-    //container
-    <div className="            
-            mt-15
-            rounded-3xl
-            border
-            bg-indigo-950/40 
-            border-white/90
-            
-            
-            w-[340px]
-            min-h-[223px]">
-
-                <div>
-                    <h3 className="text-amber-50 
-                                    text-center 
-                                    p-2 
-                                    font-bold 
-                                    text-xl
-                                    border-b ">
-                        
-                        Notes</h3>
-
-                    <textarea 
-                        value ={note}
-                        onChange={(e) => setNote(e.target.value)}
-                        placeholder="Add your notes here"
-                    
-                        className="w-[340px] 
-                                    overflow-y-auto
-                                    scrollbar-none
-                                    h-40 
-                                    resize-none 
-                                    rounded-xl 
-                                    border-none 
-                                    outline-0 
-                                    p-5 
-                                    text-[12px] 
-                                    text-amber-50 
-                                    placeholder:text-xl"/>
-                </div>
-                
-            </div>
+            <textarea
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                placeholder="Add your notes here"
+                className="min-h-[200px] w-full flex-1 resize-none overflow-y-auto rounded-b-3xl border-none bg-transparent p-4 text-base leading-relaxed text-amber-50 outline-none placeholder:text-amber-50/40 sm:p-5"
+            />
+        </div>
+    </div>
     );
 }
 

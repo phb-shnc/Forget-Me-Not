@@ -19,15 +19,8 @@ function Searchbar() {
         <div className="relative flex items-center">
 
             <input
-                className="
-                    bg-white
-                    rounded-full
-                    p-1
-                    px-3
-                    shadow-amber-50
-                    shadow-sm
-                    
-                "
+                aria-label="Search"
+                className="w-36 rounded-full bg-white px-3 py-2 text-sm text-[#00002B] shadow-amber-50 shadow-sm outline-none ring-amber-50 focus:ring-2 sm:w-40"
                 type="text"
                 placeholder="Search"
                 value={search}

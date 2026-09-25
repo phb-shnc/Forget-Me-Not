@@ -23,8 +23,12 @@ function Profilebutton() {
     return (
         <div className="relative">
             {isOpen && <><div className="h-8 rounded-full w-8 absolute bg-white/50 top-[1px] right-[1.5px] shadow-black shadow-2xl"></div></>}
-        <button className="flex relative items-center text-4xl text-center text-white "
-        onClick={() => setisOpen(!isOpen)}>
+        <button
+            type="button"
+            aria-label="Toggle profile menu"
+            className="relative flex h-9 w-9 items-center justify-center rounded-full text-3xl text-white transition-colors hover:bg-white/10"
+            onClick={() => setisOpen(!isOpen)}
+        >
         
              <CgProfile />
         </button>
@@ -37,6 +41,7 @@ function Profilebutton() {
                             z-50
 
                             w-[280px]
+                            max-w-[calc(100vw-2rem)]
                             rounded-2xl
                             border
                             border-violet-900

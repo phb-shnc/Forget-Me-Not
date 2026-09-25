@@ -32,39 +32,30 @@ useEffect(() => {
     fetchQuote();
 }, []);
 
-    if (loading) {
-        return <p>Loading today's quote...</p>;
-    }
-
-    if (error) {
-        return <p>{error}</p>;
-    }
-
     return (
-        <div className="">
-        <div className="w-[220px]
-            h-[220px]
-            mt-5
-            ml-20
-            mb-10
-            rounded-full
-            p-9
-            border
-            text-center
-            flex
-            flex-col
-            justify-center
-            bg-indigo-950/40 
-            border-white/90
-            overflow-hidden
-            text-white
-            text-[12px]
-            ">
-            <p className="font-bold text-center ">Quote of the day</p>
-            <p className="border-b-gray-700 border-t mt-2 p-2 font-semibold">"{quote}"</p>
-            <p className="text-[10px] text-right">— {author}</p>
-        </div>
-        </div>
+        <section className="flex h-full min-h-[270px] w-full min-w-0 items-center justify-center">
+            <div className="flex aspect-square w-full max-w-[250px] flex-col justify-center overflow-hidden rounded-full border border-white/90 bg-indigo-950/40 p-6 text-center text-white sm:p-7">
+                {loading ? (
+                    <p className="text-sm font-medium text-white/70">
+                        Loading today&apos;s quote...
+                    </p>
+                ) : error ? (
+                    <p className="text-sm font-medium text-red-200">{error}</p>
+                ) : (
+                    <>
+                        <h2 className="text-xs font-bold uppercase tracking-widest">
+                            Quote of the day
+                        </h2>
+                        <p className="mt-3 border-y border-white/20 py-3 text-sm font-semibold leading-relaxed">
+                            “{quote}”
+                        </p>
+                        <p className="mt-2 text-right text-xs text-white/70">
+                            — {author}
+                        </p>
+                    </>
+                )}
+            </div>
+        </section>
     );
 }
 
